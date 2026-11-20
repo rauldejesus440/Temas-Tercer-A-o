@@ -68,11 +68,16 @@
   footer{color:var(--muted);font-size:.85rem;text-align:center;padding:10px 20px 40px}
   @media (max-width:640px){ .post{padding:22px 18px} header.site h1{font-size:1.55rem} .post table{display:block;overflow-x:auto} }
   @media print{ header.site .tools,.back,.pn,footer{display:none} body{background:#fff} .post{border:none;padding:0} }
+  .grades{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+  .grades a{font-size:.85rem;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 13px;background:var(--bg)}
+  .grades a[aria-current="page"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+  @media print{.grades{display:none}}
 </style>
 </head>
 <body>
 <header class="site">
   <div class="wrap">
+    <nav class="grades" aria-label="Grados"><a href="index.html" aria-current="page">3.er año</a><a href="septimo.html">Séptimo</a><a href="octavo.html">Octavo</a><a href="noveno.html">Noveno</a></nav>
     <div class="kicker">Educación Física · 3.er año de bachillerato · 2026</div>
     <h1>Temas desarrollados de los periodos 1 a 4</h1>
     <p>Lecturas y actividades trabajadas durante el año, para que cualquier docente pueda consultarlas, adaptarlas y usarlas con sus grupos.</p>
