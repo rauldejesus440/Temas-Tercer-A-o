@@ -3,182 +3,1102 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Temas 2026 · 3° Salud "A" · Educación Física</title>
+<title>Educación Física · 3.er año de bachillerato · Temas 2026</title>
+<meta name="description" content="Temas desarrollados de Educación Física para 3.er año de bachillerato, periodos 1 a 4 (2026): lecturas y actividades para consulta docente.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#5d6878; --line:#e3e7ed;
+    --bg:#f7f6f2; --paper:#fff; --ink:#1f2328; --muted:#5f6670; --line:#e4e1d9; --accent:#1d6b52;
     --p1:#2f6fd6; --p2:#1f9d6b; --p3:#d9822b; --p4:#8a4fd1;
-    --mat:#e8f0fe; --mat-ink:#1a56b8; --tar:#fdf1e3; --tar-ink:#a35a0c;
+    --act:#f1f7f4; --act-line:#cfe5da; --note:#fff7e8; --note-line:#f0dcb4;
   }
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#11151b; --card:#1a2029; --ink:#e6eaf0; --muted:#9aa5b4; --line:#2a323e;
-      --mat:#1d2b44; --mat-ink:#8db4ff; --tar:#3a2a17; --tar-ink:#f2b46c; }
+    :root{ --bg:#121417; --paper:#1a1d22; --ink:#e7e9ec; --muted:#a2a9b3; --line:#2b3038; --accent:#5cc69d;
+      --act:#16251f; --act-line:#24453a; --note:#2a2214; --note-line:#4d3d1d; }
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
-  header{background:var(--card);border-bottom:1px solid var(--line);padding:28px 20px 20px}
-  .wrap{max-width:980px;margin:0 auto}
-  h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:-.01em}
-  .sub{color:var(--muted);margin:0}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
-  .stat{border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--c);background:var(--card);cursor:pointer;text-align:left;font:inherit;color:inherit}
-  .stat:hover{box-shadow:0 2px 10px rgba(0,0,0,.06)}
-  .stat b{display:block;font-size:.95rem}
-  .stat span{color:var(--muted);font-size:.85rem}
-  .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header.site{background:var(--paper);border-bottom:1px solid var(--line)}
+  header.site .wrap{padding-top:34px;padding-bottom:26px}
+  .kicker{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  header.site h1{font-family:Merriweather,Georgia,serif;font-size:2rem;line-height:1.25;margin:6px 0 8px}
+  header.site p{margin:0;color:var(--muted);max-width:720px}
+  .tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;align-items:center}
   .tools input{flex:1;min-width:220px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink)}
-  .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:.9rem;cursor:pointer}
-  .chip[aria-pressed="true"]{background:var(--ink);color:var(--card);border-color:var(--ink)}
-  main{padding:10px 20px 60px}
-  section.periodo{margin-top:30px;break-inside:avoid-page}
-  .ph{display:flex;align-items:baseline;gap:12px;border-left:6px solid var(--c);padding-left:12px;margin-bottom:12px}
-  .ph h2{margin:0;font-size:1.25rem}
-  .ph small{color:var(--muted)}
-  .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px;break-inside:avoid;page-break-inside:avoid}
-  .top{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-  .item h3{margin:0;font-size:1.02rem;font-weight:600}
-  .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:.8rem}
-  .badge{border-radius:6px;padding:2px 8px;font-weight:600}
-  .b-mat{background:var(--mat);color:var(--mat-ink)}
-  .b-tar{background:var(--tar);color:var(--tar-ink)}
-  .b-pts{border:1px solid var(--line);color:var(--muted)}
-  .date{color:var(--muted)}
-  .tag{display:inline-block;font-size:.75rem;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:1px 7px;margin-top:6px}
-  .desc{margin:8px 0 0;white-space:pre-line;color:var(--ink);font-size:.93rem}
-  .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-  .links a{font-size:.85rem;text-decoration:none;color:var(--mat-ink);border:1px solid var(--line);border-radius:8px;padding:5px 10px;background:var(--bg)}
-  .links a:hover{border-color:var(--mat-ink)}
-  .links a.cls{color:var(--muted)}
-  .empty{color:var(--muted);padding:20px;text-align:center}
-  footer{color:var(--muted);font-size:.8rem;text-align:center;padding:0 20px 30px}
-  @media (max-width:700px){ .stats{grid-template-columns:repeat(2,1fr)} }
-  @media print{ header .tools{display:none} body{background:#fff} .item{border-color:#ccc} }
+  .chip{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:.88rem;cursor:pointer}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  main{padding:10px 0 60px}
+  .period{margin-top:34px}
+  .period-head{border-left:6px solid var(--c);padding-left:14px;margin-bottom:14px}
+  .period-head h2{margin:0;font-family:Merriweather,Georgia,serif;font-size:1.3rem}
+  .period-head p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;border-top:4px solid var(--c);transition:box-shadow .15s, transform .15s}
+  .card:hover{box-shadow:0 6px 18px rgba(0,0,0,.08);transform:translateY(-1px)}
+  .card .n{font-size:.75rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+  .card h3{margin:0;font-size:1.05rem;line-height:1.35}
+  .card p{margin:0;color:var(--muted);font-size:.9rem}
+  .empty{color:var(--muted);text-align:center;padding:40px 0}
+  /* Post */
+  .post{display:none;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px 40px;margin-top:26px}
+  .post.on{display:block}
+  .back{display:inline-block;margin-top:24px;font-size:.92rem;text-decoration:none}
+  .post .meta{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--c);font-weight:700}
+  .post h1{font-family:Merriweather,Georgia,serif;font-size:1.75rem;line-height:1.3;margin:6px 0 10px}
+  .post .ind{background:var(--note);border:1px solid var(--note-line);border-radius:10px;padding:10px 14px;font-size:.92rem;margin:14px 0 22px;break-inside:avoid}
+  .post h2{font-family:Merriweather,Georgia,serif;font-size:1.2rem;margin:28px 0 8px}
+  .post h3{font-size:1.02rem;margin:20px 0 6px}
+  .post p,.post li{font-size:1rem}
+  .post .lead{font-size:1.08rem;color:var(--muted)}
+  .act{background:var(--act);border:1px solid var(--act-line);border-radius:12px;padding:16px 20px;margin:18px 0;break-inside:avoid;page-break-inside:avoid}
+  .act h3{margin-top:0}
+  .act h3::before{content:"✎ ";color:var(--accent)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem;break-inside:avoid;page-break-inside:avoid}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--bg)}
+  .blank td{height:34px}
+  .flow{font-weight:600;color:var(--accent);text-align:center;margin:14px 0}
+  .pn{display:flex;justify-content:space-between;gap:12px;margin-top:34px;border-top:1px solid var(--line);padding-top:16px;font-size:.92rem}
+  .pn a{text-decoration:none;max-width:48%}
+  .src{font-size:.85rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:26px;padding-top:10px}
+  footer{color:var(--muted);font-size:.85rem;text-align:center;padding:10px 20px 40px}
+  @media (max-width:640px){ .post{padding:22px 18px} header.site h1{font-size:1.55rem} .post table{display:block;overflow-x:auto} }
+  @media print{ header.site .tools,.back,.pn,footer{display:none} body{background:#fff} .post{border:none;padding:0} }
 </style>
 </head>
 <body>
-<header>
+<header class="site">
   <div class="wrap">
-    <h1>Temas publicados 2026 — 3° Salud "A"</h1>
-    <p class="sub">Educación Física · Google Classroom · Prof. Raúl de Jesús Benítez Salinas</p>
-    <div class="stats" id="stats"></div>
-    <div class="tools">
-      <input id="q" type="search" placeholder="Buscar tema, indicador o archivo…" aria-label="Buscar">
-      <button class="chip" data-f="all" aria-pressed="true">Todo</button>
-      <button class="chip" data-f="Material">Materiales</button>
-      <button class="chip" data-f="Tarea">Tareas</button>
+    <div class="kicker">Educación Física · 3.er año de bachillerato · 2026</div>
+    <h1>Temas desarrollados de los periodos 1 a 4</h1>
+    <p>Lecturas y actividades trabajadas durante el año, para que cualquier docente pueda consultarlas, adaptarlas y usarlas con sus grupos.</p>
+    <div class="tools" id="tools">
+      <input id="q" type="search" placeholder="Buscar un tema: voleibol, ajedrez, lesiones, fútbol…" aria-label="Buscar tema">
+      <button class="chip" data-p="0" aria-pressed="true">Todos</button>
+      <button class="chip" data-p="1">Periodo 1</button>
+      <button class="chip" data-p="2">Periodo 2</button>
+      <button class="chip" data-p="3">Periodo 3</button>
+      <button class="chip" data-p="4">Periodo 4</button>
     </div>
   </div>
 </header>
-<main class="wrap" id="main"></main>
-<footer>Datos tomados de la sección "Trabajo en clase" de Classroom el 19 de noviembre de 2026 · 24 publicaciones.</footer>
+
+<main class="wrap">
+  <div id="home"></div>
+  <div id="posts">
+
+<!-- ===================== PERIODO 1 ===================== -->
+<article class="post" id="bienvenida" data-p="1" data-t="Bienvenida a Educación Física" data-s="Mensaje de inicio de año: propósitos del curso y compromisos básicos.">
+  <div class="meta">Periodo 1 · Inicio de año</div>
+  <h1>Bienvenida a Educación Física</h1>
+  <p class="lead">Mensaje para iniciar el año con los estudiantes y acordar las reglas de trabajo.</p>
+  <p>Queridos estudiantes: les doy la más cordial bienvenida a este nuevo año en la asignatura de Educación Física. Este espacio no es solo para “hacer ejercicio”; es un laboratorio donde vamos a conocernos, superarnos y construir disciplina, carácter y trabajo en equipo.</p>
+  <h2>Durante el año trabajaremos para:</h2>
+  <ul>
+    <li>Mejorar nuestra condición física de manera progresiva y consciente.</li>
+    <li>Comprender cómo funciona nuestro cuerpo y cómo entrenarlo correctamente.</li>
+    <li>Desarrollar valores como respeto, responsabilidad, liderazgo y cooperación.</li>
+    <li>Establecer metas personales claras y medibles, y evaluar nuestro propio progreso.</li>
+  </ul>
+  <p>Aquí no se trata de quién es el más fuerte o el más rápido. Se trata de quién es constante, quién se esfuerza y quién decide superarse cada día. Cada clase será una oportunidad para avanzar un poco más que ayer.</p>
+  <h2>Compromisos básicos del curso</h2>
+  <ol>
+    <li>Puntualidad y participación activa.</li>
+    <li>Uso adecuado del uniforme y materiales.</li>
+    <li>Respeto hacia compañeros y docente.</li>
+    <li>Actitud positiva ante el aprendizaje y el esfuerzo físico.</li>
+  </ol>
+  <p><strong>Recuerden:</strong> el cuerpo es el único lugar donde vamos a vivir toda la vida. Aprender a cuidarlo y desarrollarlo es una inversión para siempre. ¡Iniciamos con energía, disciplina y mentalidad de mejora continua!</p>
+</article>
+
+<article class="post" id="condicion-fisica" data-p="1" data-t="La condición física y el entrenamiento" data-s="Adaptaciones del cuerpo al ejercicio, VO₂ máximo y pruebas físicas (Test de Cooper y Course Navette).">
+  <div class="meta">Periodo 1 · Semana 5</div>
+  <h1>La condición física y el entrenamiento</h1>
+  <div class="ind"><strong>Indicador 1.1:</strong> Evalúa sus capacidades físicas y técnicas en un deporte de elección, mediante pruebas e instrumentos de autoevaluación, estableciendo metas de mejora personal vinculadas a un estilo de vida activo.</div>
+  <h2>Lectura</h2>
+  <p>El entrenamiento físico permite mejorar el rendimiento del cuerpo y mantener una buena salud. Cuando una persona realiza ejercicio de forma regular, su organismo se adapta progresivamente a los esfuerzos. Estas adaptaciones permiten que el cuerpo funcione de manera más eficiente durante la actividad física.</p>
+  <p>Uno de los sistemas que más se beneficia del entrenamiento es el <strong>sistema cardiovascular</strong>. El corazón se fortalece y puede bombear más sangre hacia los músculos, lo que mejora el transporte de oxígeno por todo el cuerpo. Gracias a esto, la persona puede realizar actividades físicas durante más tiempo sin fatigarse rápidamente.</p>
+  <p>También se producen adaptaciones en el <strong>sistema muscular</strong>: los músculos aumentan su fuerza, resistencia y coordinación, lo que facilita la ejecución de movimientos deportivos con mayor eficacia y menor riesgo de lesiones. El <strong>sistema respiratorio</strong> también se adapta: durante la actividad física aumenta la frecuencia respiratoria y el volumen de aire que entra en los pulmones, lo que permite que el cuerpo utilice más oxígeno para producir energía.</p>
+  <p>Una forma de medir la capacidad del cuerpo para utilizar el oxígeno durante el ejercicio es el <strong>VO₂ máximo</strong>. Este indicador representa la capacidad del organismo para transportar y utilizar oxígeno durante un esfuerzo físico prolongado.</p>
+  <p>En Educación Física se utilizan diferentes pruebas para evaluar las capacidades físicas de los estudiantes. Algunas de las más utilizadas son el <strong>Test de Cooper</strong> y el <strong>Course Navette</strong>, que permiten estimar la resistencia aeróbica de una persona.</p>
+  <p>Evaluar las capacidades físicas permite conocer el nivel actual de condición física de cada estudiante. Con esa información es posible establecer metas personales de mejora y desarrollar hábitos de vida activa que contribuyen al bienestar físico y a la prevención de enfermedades.</p>
+  <div class="act">
+    <h3>Actividad 1. Preguntas de comprensión</h3>
+    <ol>
+      <li>¿Por qué es importante realizar entrenamiento físico?</li>
+      <li>¿Qué sistema del cuerpo transporta el oxígeno hacia los músculos?</li>
+      <li>¿Qué es el VO₂ máximo?</li>
+      <li>Menciona dos beneficios que produce el entrenamiento en el cuerpo.</li>
+      <li>¿Para qué sirven las pruebas físicas en Educación Física?</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Completa las frases</h3>
+    <ol>
+      <li>El entrenamiento mejora el ________ físico.</li>
+      <li>El sistema ________ transporta la sangre por el cuerpo.</li>
+      <li>Los músculos aumentan su ________ y resistencia con el entrenamiento.</li>
+      <li>El ________ máximo mide la capacidad del cuerpo para usar oxígeno.</li>
+      <li>Las ________ físicas permiten conocer el nivel de condición física.</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 3. Autoevaluación inicial</h3>
+    <ol>
+      <li>¿Cómo consideras tu condición física actualmente?</li>
+      <li>¿Qué capacidad física te gustaría mejorar?</li>
+      <li>¿Qué deporte practicas o te gustaría practicar?</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="test-fisicos" data-p="1" data-t="Test físicos: protocolo e interpretación" data-s="Actividad de refuerzo del periodo 1: fuerza, resistencia, velocidad y flexibilidad, con tablas de rangos y análisis personal.">
+  <div class="meta">Periodo 1 · Refuerzo y recuperación</div>
+  <h1>Test físicos: protocolo e interpretación</h1>
+  <div class="ind"><strong>Indicador 1.1:</strong> Evalúa sus capacidades físicas y técnicas en un deporte de elección, mediante pruebas e instrumentos de autoevaluación, estableciendo metas de mejora personal vinculadas a un estilo de vida activo.</div>
+  <p class="lead">La condición física se evalúa mediante test físicos. Esta actividad pide al estudiante documentar, con sus propios resultados de clase, cómo se realizó cada prueba y qué nivel alcanzó.</p>
+  <h2>Indicaciones generales</h2>
+  <ul>
+    <li>Leer cuidadosamente la actividad antes de iniciar.</li>
+    <li>Desarrollar cada apartado de forma ordenada, clara y completa, con buena redacción, ortografía y limpieza.</li>
+    <li>Se puede investigar para apoyar el contenido.</li>
+    <li>Entregar en hojas de papel bond, con carátula, en la fecha establecida.</li>
+  </ul>
+  <div class="act">
+    <h3>1. Para cada capacidad física</h3>
+    <p>Desarrolla el trabajo para las cuatro capacidades: <strong>fuerza</strong>, <strong>resistencia</strong>, <strong>velocidad</strong> y <strong>flexibilidad</strong>.</p>
+    <h3>2. En cada capacidad incluye</h3>
+    <ol type="a">
+      <li><strong>Nombre del test</strong> (por ejemplo: abdominales, Mini Cooper, etc.).</li>
+      <li><strong>Protocolo del test:</strong> explica paso a paso cómo se realizó en clase.</li>
+      <li><strong>Tabla de rangos:</strong> clasificación excelente, bueno, regular y bajo, según las tablas vistas en clase.</li>
+      <li><strong>Resultado personal:</strong> el resultado que obtuviste en la prueba.</li>
+      <li><strong>Nivel alcanzado</strong> según la tabla de rangos.</li>
+    </ol>
+    <h3>3. Análisis final</h3>
+    <p>Basado en tus resultados reales:</p>
+    <ul>
+      <li>¿En qué capacidad física obtuviste mejor resultado?</li>
+      <li>¿En cuál necesitas mejorar?</li>
+      <li>¿Por qué crees que obtuviste esos resultados?</li>
+      <li>Propón una acción concreta para mejorar la capacidad más baja.</li>
+    </ul>
+  </div>
+  <table>
+    <tr><th>Criterio de evaluación</th><th>Peso</th></tr>
+    <tr><td>Presentación</td><td>20 %</td></tr>
+    <tr><td>Responsabilidad en la entrega</td><td>20 %</td></tr>
+    <tr><td>Contenido</td><td>60 %</td></tr>
+  </table>
+</article>
+
+<!-- ===================== PERIODO 2 ===================== -->
+<article class="post" id="deportes-invasion" data-p="2" data-t="Estrategia y táctica en los deportes de invasión" data-s="Espacio, tiempo, sistemas de juego, principios tácticos (ocupación, amplitud, profundidad, transición) y toma de decisiones.">
+  <div class="meta">Periodo 2 · Semana 11</div>
+  <h1>Estrategia y táctica en los deportes de invasión</h1>
+  <div class="ind"><strong>Indicador 2.1:</strong> Aplica sistemas tácticos ofensivos y defensivos sencillos en un deporte de invasión, analizando situaciones de juego y adaptando decisiones tácticas durante minijuegos o simulaciones.</div>
+  <h2>Contenidos</h2>
+  <ul>
+    <li><strong>Conceptuales:</strong> sistemas de juego ofensivos y defensivos (baloncesto 2-1-2, fútbol 4-4-2, balonmano 6-0); principios básicos de la táctica deportiva (ocupación de espacios, apoyo, cobertura y transición); tipos de decisiones tácticas (ataque posicional, contraataque, reorganización defensiva); importancia del análisis de juego.</li>
+    <li><strong>Procedimentales:</strong> aplicación de sistemas sencillos en minijuegos y simulaciones; identificación de situaciones favorables y desfavorables; ajuste táctico individual y colectivo.</li>
+    <li><strong>Actitudinales:</strong> cooperación y trabajo en equipo; juego limpio y convivencia pacífica.</li>
+  </ul>
+  <h2>Lectura</h2>
+  <p>Los <strong>deportes de invasión</strong> son disciplinas colectivas en las que dos equipos se enfrentan con el propósito de penetrar el espacio del adversario para anotar puntos, mientras intentan evitar que el oponente haga lo mismo. Ejemplos representativos son el fútbol, el baloncesto y el balonmano. Su característica principal es la alternancia constante entre ataque y defensa, lo que obliga a los jugadores a adaptarse continuamente a situaciones cambiantes del juego.</p>
+  <p>En estos deportes, el <strong>espacio</strong> y el <strong>tiempo</strong> son factores determinantes. El espacio no se ocupa al azar: cada jugador debe ubicarse donde aporte más al equipo. El tiempo se relaciona con la rapidez en la ejecución de acciones, especialmente en los momentos de transición. La combinación adecuada de ambos permite que el equipo funcione de manera coordinada y eficaz.</p>
+  <p>Los <strong>sistemas de juego</strong> representan la organización estructurada de los jugadores dentro del campo. En fase ofensiva, el sistema busca facilitar la progresión del balón hacia la zona de anotación mediante la creación de líneas de pase, desmarques y ocupación racional del espacio; cada jugador cumple una función específica dentro de un orden colectivo. En fase defensiva, el sistema busca reducir los espacios disponibles para el adversario, proteger zonas clave y recuperar la posesión mediante el marcaje, la cobertura entre compañeros y el equilibrio defensivo. Un equipo bien organizado no solo reacciona: anticipa las acciones del rival.</p>
+  <h3>Principios tácticos</h3>
+  <ul>
+    <li><strong>Ocupación del espacio:</strong> distribuir a los jugadores de manera equilibrada para maximizar las opciones de juego. Si todos se concentran en una zona, el equipo pierde eficacia y facilita la defensa rival.</li>
+    <li><strong>Amplitud:</strong> utilizar todo el ancho del campo para abrir la defensa y generar espacios internos.</li>
+    <li><strong>Profundidad:</strong> capacidad de avanzar hacia la meta rival mediante pases largos, desplazamientos o penetraciones.</li>
+    <li><strong>Transición:</strong> cambio inmediato entre ataque y defensa; es un momento crítico en el que muchos equipos ganan o pierden ventaja.</li>
+  </ul>
+  <h3>La toma de decisiones</h3>
+  <p>La toma de decisiones es el eje central del rendimiento. Cada jugador interpreta constantemente la situación y selecciona la acción más adecuada según la percepción del entorno, la posición de compañeros y adversarios, y su experiencia. Decidir bien implica saber cuándo pasar, avanzar, conservar el balón o retroceder. En <strong>ataque</strong> se busca progresar y generar opciones de anotación con movilidad y cooperación; en el <strong>contraataque</strong> la prioridad es la velocidad, aprovechando el desorden del rival; en <strong>defensa</strong>, la reorganización rápida, el cierre de espacios y la presión sobre el portador del balón.</p>
+  <p>Los <strong>juegos reducidos</strong> permiten participar más, aumentan la frecuencia de decisiones y facilitan la comprensión táctica. El dominio de la estrategia se manifiesta cuando el jugador interpreta el juego, se ubica correctamente, decide con coherencia y colabora con su equipo: no basta con ejecutar habilidades técnicas, hay que comprender cuándo y por qué utilizarlas.</p>
+  <div class="act">
+    <h3>Actividad 1. Análisis de una situación de juego</h3>
+    <p>Un equipo tiene el balón, pero todos sus jugadores están muy juntos en el centro del campo. No utilizan las bandas y el rival recupera fácilmente el balón.</p>
+    <ol type="a">
+      <li>¿Qué principio táctico no se está aplicando correctamente?</li>
+      <li>Explica por qué esa mala decisión afecta el juego.</li>
+      <li>¿Qué deberían hacer los jugadores para mejorar la situación?</li>
+      <li>Menciona dos acciones concretas que podrían realizar.</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Clasificación táctica de acciones</h3>
+    <p>Clasifica cada acción como <em>ataque</em>, <em>defensa</em> o <em>transición</em> y explica brevemente por qué.</p>
+    <ol>
+      <li>Un jugador corre rápidamente hacia adelante tras recuperar el balón.</li>
+      <li>Un equipo se organiza detrás del balón para evitar un gol.</li>
+      <li>Un jugador pasa el balón hacia atrás para mantener la posesión.</li>
+      <li>El equipo pierde el balón y todos regresan a defender.</li>
+      <li>Dos jugadores se abren hacia los lados para recibir un pase.</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 3. Toma de decisiones tácticas</h3>
+    <p>Explica qué harías y por qué. <strong>No basta con decir “pasar” o “correr”: debes dar la razón táctica.</strong></p>
+    <ol type="a">
+      <li>Tienes el balón cerca de la portería, rodeado de defensas, y un compañero está solo a tu derecha.</li>
+      <li>Tu equipo pierde el balón y el rival inicia un contraataque.</li>
+      <li>Estás en ataque, pero no tienes espacio para avanzar.</li>
+      <li>Estás defendiendo y el rival se acerca rápidamente a tu portería.</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Preguntas de repaso (cuestionario)</h3>
+    <ol>
+      <li>¿Cuál es la característica principal de los deportes de invasión que obliga a los jugadores a adaptarse continuamente?</li>
+      <li>¿Qué busca un sistema de juego en la fase ofensiva y en la fase defensiva?</li>
+      <li>¿Qué principio táctico busca utilizar todo el ancho del campo?</li>
+      <li>¿Qué sucede si todos los jugadores se concentran en una misma zona?</li>
+      <li>¿Por qué la transición es un momento crítico?</li>
+      <li>¿Cómo se relaciona el tiempo con la eficacia del equipo?</li>
+      <li>¿Por qué la toma de decisiones es el eje central del rendimiento?</li>
+      <li>¿Cómo contribuyen los juegos reducidos al aprendizaje táctico?</li>
+      <li>¿Por qué no es suficiente tener solo habilidades técnicas?</li>
+      <li>¿Qué implica el principio de profundidad?</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="principios-tacticos" data-p="2" data-t="Principios tácticos fundamentales del fútbol" data-s="Los cinco principios ofensivos y los cinco defensivos, con su objetivo y ejemplos de aplicación.">
+  <div class="meta">Periodo 2 · Actividad cotidiana e integradora</div>
+  <h1>Principios tácticos fundamentales del fútbol</h1>
+  <div class="ind"><strong>Indicador 2.1:</strong> Aplica sistemas tácticos ofensivos y defensivos sencillos en un deporte de invasión, analizando situaciones de juego y adaptando decisiones tácticas durante minijuegos o simulaciones.</div>
+  <p class="lead">Los principios tácticos son las ideas que orientan el comportamiento de cada jugador según su equipo tenga o no el balón. Cumplirlos ayuda al equipo a ganar ventaja de espacio y tiempo: más jugadores cerca de la jugada, más opciones de pase y más posibilidades de desordenar al rival.</p>
+  <h2>Principios de la fase ofensiva (con balón)</h2>
+  <table>
+    <tr><th>Principio</th><th>¿En qué consiste?</th><th>Ejemplo de aplicación</th></tr>
+    <tr><td><strong>Penetración</strong></td><td>El portador del balón progresa hacia la portería o la línea de fondo rival, buscando las zonas de mayor peligro.</td><td>Un regate o una conducción que deja atrás a un defensor y acerca el balón al área.</td></tr>
+    <tr><td><strong>Cobertura ofensiva</strong></td><td>Los compañeros se acercan al portador para ofrecerle apoyo y líneas de pase cercanas.</td><td>Una pared o una triangulación con el compañero que tiene el balón.</td></tr>
+    <tr><td><strong>Movilidad</strong></td><td>Los jugadores sin balón se desmarcan para recibir o arrastrar defensores. El <em>desmarque de ruptura</em> es el movimiento a la espalda de la defensa para recibir en profundidad.</td><td>Un delantero que pica al espacio detrás de los centrales.</td></tr>
+    <tr><td><strong>Espacio</strong></td><td>Ampliar el campo de juego a lo ancho y a lo largo para separar a los defensores y crear huecos.</td><td>Los extremos abiertos pegados a la banda.</td></tr>
+    <tr><td><strong>Unidad ofensiva</strong></td><td>El equipo ataca como un bloque: las líneas se mueven juntas y mantienen distancias equilibradas.</td><td>La defensa adelanta su línea cuando el equipo avanza.</td></tr>
+  </table>
+  <h2>Principios de la fase defensiva (sin balón)</h2>
+  <table>
+    <tr><th>Principio</th><th>¿En qué consiste?</th><th>Ejemplo de aplicación</th></tr>
+    <tr><td><strong>Contención</strong></td><td>El defensor más cercano frena al portador del balón, retrasa su avance y le quita opciones.</td><td>Ponerse entre el atacante y la portería sin lanzarse a la entrada.</td></tr>
+    <tr><td><strong>Cobertura defensiva</strong></td><td>Un compañero se coloca detrás del defensor que contiene, para ayudarle si es superado. Debe considerar la posición del balón, del rival y de la portería.</td><td>El central que respalda al lateral que sale a presionar.</td></tr>
+    <tr><td><strong>Equilibrio</strong></td><td>Mantener la superioridad numérica o la igualdad en la zona del balón y vigilar a los rivales sin marca.</td><td>Un mediocampista que se mete entre los centrales cuando un lateral sube.</td></tr>
+    <tr><td><strong>Concentración</strong></td><td>Cerrar los espacios por el centro y aumentar la presión en la zona más peligrosa.</td><td>El equipo se cierra hacia el área cuando el rival centra.</td></tr>
+    <tr><td><strong>Unidad defensiva</strong></td><td>Todo el equipo defiende como un bloque compacto, reduciendo distancias entre líneas.</td><td>Los delanteros también retroceden a defender.</td></tr>
+  </table>
+  <div class="act">
+    <h3>Actividad cotidiana. Resumen y mapa conceptual</h3>
+    <p>Realiza un resumen del contenido y elabora un mapa conceptual en tu cuaderno de Educación Física.</p>
+  </div>
+  <div class="act">
+    <h3>Actividad integradora. Preguntas de repaso (cuestionario)</h3>
+    <ol>
+      <li>¿Cuál es el objetivo principal del principio de penetración?</li>
+      <li>¿Cuál es el propósito principal del principio de cobertura ofensiva?</li>
+      <li>Según el principio de movilidad, ¿qué es un desmarque de ruptura?</li>
+      <li>¿Qué busca el principio del espacio en el fútbol ofensivo?</li>
+      <li>¿Qué es fundamental para lograr cohesión y eficacia según el principio de unidad ofensiva?</li>
+      <li>¿Cuál es el objetivo principal del principio de contención?</li>
+      <li>Según el principio de cobertura defensiva, ¿qué factores deben considerar los jugadores?</li>
+      <li>¿Qué busca el principio de equilibrio en la organización defensiva?</li>
+      <li>¿Cuál es el objetivo principal del principio de concentración?</li>
+      <li>¿Qué implica el principio de unidad defensiva?</li>
+      <li>¿Qué ventaja obtiene el equipo al cumplir los principios tácticos de la fase ofensiva?</li>
+    </ol>
+  </div>
+  <p class="src">Material de apoyo usado en clase: artículo «Principios tácticos del fútbol: conceptos y aplicaciones», de Israel Costa y colaboradores (revista <em>Táctica</em>, futbol-tactico.com). El cuadro anterior es una síntesis propia para el aula.</p>
+</article>
+
+<article class="post" id="sistemas-de-juego" data-p="2" data-t="Sistemas de juego en el fútbol" data-s="4-4-2, 4-3-3, 3-5-2 y 4-2-3-1: qué representan los números, ventajas de cada sistema y escenarios para elegir.">
+  <div class="meta">Periodo 2 · Indicador 2.1</div>
+  <h1>Sistemas de juego en el fútbol</h1>
+  <div class="ind"><strong>Indicador 2.1:</strong> Aplica sistemas tácticos ofensivos y defensivos sencillos en un deporte de invasión, analizando situaciones de juego y adaptando decisiones tácticas durante minijuegos o simulaciones.</div>
+  <h2>¿Qué es un sistema de juego?</h2>
+  <p>Un sistema de juego es la forma en que se distribuyen los jugadores sobre el terreno, tanto en ataque como en defensa. Se representa con números (como 4-3-3 o 4-4-2) que indican la cantidad de <strong>defensas, centrocampistas y delanteros</strong>; el portero no se cuenta.</p>
+  <p>Sin embargo, un sistema no es una fotografía estática: es <strong>dinámico</strong>. En él se tienen en cuenta:</p>
+  <ul>
+    <li><strong>Movimientos coordinados</strong> entre las líneas (defensa, medio y ataque).</li>
+    <li><strong>Roles específicos</strong> según el perfil físico y técnico de cada jugador.</li>
+    <li><strong>Adaptaciones</strong> según el rival y el momento del partido.</li>
+  </ul>
+  <p>Por eso, dos equipos con la misma estructura inicial pueden jugar de forma muy distinta: la táctica y la estrategia determinan cómo se interpreta y ejecuta cada sistema. En lugar de copiar el esquema de otros clubes, cada equipo debe buscar el que mejor se adapte a sus jugadores y a su modelo de juego. Un buen sistema optimiza el rendimiento individual y colectivo, facilita la toma de decisiones, mejora la organización y reduce los errores tácticos.</p>
+  <h2>Los cuatro sistemas principales</h2>
+  <table>
+    <tr><th>Sistema</th><th>Idea principal</th><th>Características</th></tr>
+    <tr><td><strong>4-4-2</strong></td><td>Equilibrio clásico</td><td>Cuatro defensas, cuatro medios y dos delanteros. Gran equilibrio entre ataque y defensa; ideal para equipos compactos, ordenados y sólidos.</td></tr>
+    <tr><td><strong>4-3-3</strong></td><td>Protagonismo ofensivo</td><td>Presión alta, amplitud por las bandas con extremos rápidos, control del centro y transiciones rápidas.</td></tr>
+    <tr><td><strong>3-5-2</strong></td><td>Flexibilidad y control</td><td>Tres centrales y carrileros que recorren toda la banda. Superioridad numérica en el medio; puede defender con cinco o atacar con muchos. Exige jugadores muy específicos.</td></tr>
+    <tr><td><strong>4-2-3-1</strong></td><td>El más versátil</td><td>Dos mediocentros que equilibran, tres jugadores ofensivos con libertad y un delantero de referencia. Combina solidez y creatividad.</td></tr>
+  </table>
+  <div class="act">
+    <h3>Actividad 1. Responde en tu cuaderno</h3>
+    <ol>
+      <li>¿Qué hace que un sistema de juego sea dinámico y no una fotografía estática?</li>
+      <li>¿Qué sistema es más adecuado para extremos rápidos y habilidosos?</li>
+      <li>¿Cuál es la principal ventaja del sistema 4-4-2?</li>
+      <li>¿Por qué es importante adaptar el sistema a los jugadores disponibles?</li>
+      <li>¿Qué zona del campo busca dominar principalmente el sistema 3-5-2?</li>
+      <li>¿Qué representan los números en un sistema como 4-3-3?</li>
+      <li>¿Por qué cada equipo debe encontrar su propio sistema de juego?</li>
+      <li>¿Qué sistema se asocia con presión alta y ataque por bandas?</li>
+      <li>Además de la distribución de jugadores, ¿qué otro elemento es fundamental en un sistema?</li>
+      <li>¿Cuál es el objetivo principal de un buen sistema de juego?</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Análisis de formaciones</h3>
+    <p>Copia y completa la tabla para el 4-4-2, el 4-3-3 y el 3-5-2.</p>
+    <table class="blank">
+      <tr><th>Sistema</th><th>Distribución (D-M-A)</th><th>Perfil de equipo ideal</th><th>Ventaja principal</th><th>Desventaja o riesgo</th></tr>
+      <tr><td>4-4-2</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>4-3-3</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3-5-2</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+    <p><strong>Análisis de roles:</strong> si un equipo juega con 4-3-3, ¿qué características físicas y técnicas deberían tener sus extremos? Justifica.</p>
+    <p><strong>Reflexión:</strong> ¿por qué se dice que un sistema de juego no es una «fotografía estática»? Explica cómo influyen los movimientos de los jugadores en el éxito de una formación.</p>
+  </div>
+  <div class="act">
+    <h3>Actividad 3. Diseño de estrategia: ¿qué sistema elegirías?</h3>
+    <p>Para cada escenario, elige 4-4-2, 4-3-3 o 3-5-2 y justifica cómo beneficia al equipo.</p>
+    <ol>
+      <li><strong>El muro defensivo.</strong> Tu equipo gana 1-0, quedan 10 minutos y el rival ataca con intensidad. Necesitas un bloque compacto y ordenado.</li>
+      <li><strong>Ataque por las bandas.</strong> Tienes dos extremos muy rápidos y hábiles en el uno contra uno. Quieres abrir el campo y enviar centros constantes.</li>
+      <li><strong>Control total del medio.</strong> El rival tiene dificultades para recuperar el balón. Quieres acumular jugadores en el centro y controlar el ritmo.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="refuerzo-p2" data-p="2" data-t="Refuerzo P2: mapa conceptual de los principios tácticos" data-s="Actividad de refuerzo y recuperación del periodo 2 con instrucciones y rúbrica de 10 puntos.">
+  <div class="meta">Periodo 2 · Refuerzo y recuperación</div>
+  <h1>Refuerzo P2: mapa conceptual de los principios tácticos del fútbol</h1>
+  <div class="ind"><strong>Indicador 2.1:</strong> Aplica sistemas tácticos ofensivos y defensivos sencillos en un deporte de invasión, analizando situaciones de juego y adaptando decisiones tácticas durante minijuegos o simulaciones.</div>
+  <p><strong>Objetivo:</strong> analizar y organizar la información sobre los principios tácticos ofensivos y defensivos del fútbol mediante un mapa conceptual que muestre las relaciones entre los conceptos.</p>
+  <div class="act">
+    <h3>Instrucciones</h3>
+    <p>Después de leer los materiales sobre los <a href="#principios-tacticos">principios tácticos fundamentales del fútbol</a>, elabora un mapa conceptual que contenga:</p>
+    <ol>
+      <li><strong>Tema central:</strong> Principios tácticos fundamentales del fútbol.</li>
+      <li><strong>Dos ramas principales:</strong> principios tácticos ofensivos y principios tácticos defensivos.</li>
+      <li>Cada uno de los principios correspondientes.</li>
+      <li>Para cada principio: su definición en una frase breve, su objetivo principal y una acción o ejemplo de aplicación.</li>
+      <li>Relaciones entre principios con palabras de enlace (favorece, permite, requiere, complementa, evita, facilita…).</li>
+      <li>Organización jerárquica con conectores y flechas.</li>
+      <li>No copiar textualmente: sintetizar con palabras propias.</li>
+    </ol>
+    <p><strong>Requisitos:</strong> en el cuaderno o en hojas de papel bond; organización lógica, claridad visual y buena ortografía; colores o símbolos para diferenciar los principios ofensivos de los defensivos.</p>
+  </div>
+  <table>
+    <tr><th>Criterio de evaluación</th><th>Puntos</th></tr>
+    <tr><td>Organización jerárquica de los conceptos</td><td>2</td></tr>
+    <tr><td>Identificación correcta de los principios tácticos</td><td>2</td></tr>
+    <tr><td>Relaciones lógicas entre los conceptos</td><td>2</td></tr>
+    <tr><td>Síntesis y uso de palabras propias</td><td>2</td></tr>
+    <tr><td>Presentación, creatividad y ortografía</td><td>2</td></tr>
+  </table>
+</article>
+<!-- ===================== PERIODO 3 ===================== -->
+<article class="post" id="fundamentos-voleibol" data-p="3" data-t="Fundamentos del voleibol" data-s="El juego, la importancia de la técnica, toque de dedos, antebrazo, saques, gestos técnicos y reglamento básico.">
+  <div class="meta">Periodo 3 · Deportes de red/muro y optimización del rendimiento</div>
+  <h1>Fundamentos del voleibol</h1>
+  <h2>1. El voleibol</h2>
+  <p>Es un deporte colectivo que enfrenta a dos equipos de seis jugadores cada uno, separados por una red. El objetivo es enviar el balón por encima de la red para que toque el suelo del campo contrario, evitando que el rival haga lo mismo. Exige coordinación, rapidez, trabajo en equipo, comunicación y buena condición física. No se permite retener el balón: cada contacto debe ser breve y limpio, y cada equipo dispone de un máximo de tres toques para devolverlo.</p>
+  <h2>2. La importancia de la técnica</h2>
+  <p>Una buena técnica permite ejecutar correctamente cada movimiento: mejora el control del balón, aumenta la precisión de los pases y reduce la posibilidad de cometer errores. También ayuda a prevenir lesiones, porque los movimientos se ejecutan con una postura corporal adecuada. Practicar constantemente los fundamentos desarrolla coordinación, equilibrio, velocidad de reacción y confianza durante la competencia.</p>
+  <h2>3. El toque de dedos</h2>
+  <p>Se utiliza principalmente para el pase de colocación, preparando el balón para que un compañero ejecute el remate. El jugador se coloca debajo del balón con los pies separados al ancho de los hombros y las rodillas ligeramente flexionadas. Las manos se sitúan frente a la frente formando un triángulo con los pulgares y los índices. El balón se impulsa con una extensión coordinada de piernas, brazos y muñecas, sin retenerlo ni lanzarlo.</p>
+  <h2>4. El toque de antebrazo</h2>
+  <p>También llamado recepción o «mancheta», es el fundamento técnico para recibir el saque y defender ataques. El jugador junta ambas manos, extiende completamente los brazos y une los antebrazos formando una superficie plana de contacto. Las piernas permanecen flexionadas y el movimiento se genera principalmente con la extensión de las piernas, no golpeando con los brazos. Una correcta ejecución permite controlar la dirección y la altura del balón para facilitar el siguiente pase.</p>
+  <h2>5. El saque de seguridad</h2>
+  <p>Es el saque por abajo, el primero que normalmente aprenden los principiantes por su facilidad y alto porcentaje de éxito. Se sostiene el balón con una mano frente al cuerpo mientras la otra realiza un movimiento pendular de atrás hacia adelante para golpear la parte inferior del balón con el puño o la palma. Busca introducir el balón al campo contrario de forma segura, priorizando la precisión sobre la potencia.</p>
+  <h2>6. El saque de tenis</h2>
+  <p>Es el saque por arriba, una técnica más avanzada que imprime mayor velocidad y potencia. El jugador lanza el balón ligeramente hacia arriba, lleva el brazo ejecutor hacia atrás y golpea el balón con la palma abierta en su punto más alto, con una extensión completa del brazo y un movimiento de muñeca. Bien ejecutado, dificulta la recepción del equipo contrario.</p>
+  <h2>7. Los gestos técnicos básicos</h2>
+  <p>Son las acciones fundamentales para desarrollar el juego: <strong>saque, toque de dedos, toque de antebrazo, remate, bloqueo y defensa</strong>. Cada uno cumple una función específica dentro de una jugada.</p>
+  <h2>8. El reglamento del voleibol</h2>
+  <ul>
+    <li>Cada equipo está integrado por seis jugadores en la cancha.</li>
+    <li>Cada equipo puede realizar hasta tres toques antes de enviar el balón al campo contrario.</li>
+    <li>Un mismo jugador no puede tocar el balón dos veces seguidas, excepto después de un bloqueo.</li>
+    <li>No se permite sujetar, retener o acompañar el balón durante el contacto.</li>
+    <li>Los sets se juegan a 25 puntos con diferencia mínima de dos; si es necesario un quinto set, se juega a 15 puntos, también con diferencia de dos.</li>
+    <li>El balón es «fuera» cuando toca el suelo fuera de las líneas o golpea objetos externos.</li>
+    <li>Los jugadores no pueden tocar la red durante una acción de juego ni invadir el campo contrario por debajo de la red cuando interfieren con el adversario.</li>
+  </ul>
+  <div class="act">
+    <h3>Actividad en parejas: cuestionario de respuesta corta</h3>
+    <p>Lean y analicen la información, discutan en parejas y luego copien y respondan el cuestionario de manera individual en el cuaderno.</p>
+    <ol>
+      <li>¿Cuál es el objetivo principal del voleibol?</li>
+      <li>¿Por qué es importante la técnica en el voleibol?</li>
+      <li>¿Cuál es la función del toque de dedos durante un partido?</li>
+      <li>¿Qué parte del cuerpo entra en contacto con el balón en el toque de antebrazo?</li>
+      <li>¿Para qué se utiliza principalmente el saque de seguridad?</li>
+      <li>¿En qué se diferencia el saque de tenis del saque de seguridad?</li>
+      <li>Menciona cuatro gestos técnicos básicos del voleibol.</li>
+      <li>¿Cuántos jugadores integran un equipo dentro de la cancha?</li>
+      <li>¿Cuántos toques como máximo puede realizar un equipo antes de pasar el balón al rival?</li>
+      <li>¿A cuántos puntos se juega normalmente un set de voleibol?</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="rotacion-voleibol" data-p="3" data-t="La rotación en el voleibol" data-s="Zonas de la cancha, orden de rotación, regla de posición en el saque y características básicas del juego.">
+  <div class="meta">Periodo 3 · Voleibol</div>
+  <h1>La rotación en el voleibol</h1>
+  <h2>Las seis zonas</h2>
+  <p>Cada mitad de la cancha se divide en seis zonas numeradas. Tres jugadores son <strong>delanteros</strong> (zonas 4, 3 y 2, junto a la red) y tres son <strong>zagueros</strong> (zonas 5, 6 y 1, en el fondo). El jugador de la <strong>zona 1</strong> (zaguero derecho) es quien saca.</p>
+  <table>
+    <tr><th></th><th>Izquierda</th><th>Centro</th><th>Derecha</th></tr>
+    <tr><th>Delanteros (junto a la red)</th><td>Zona 4</td><td>Zona 3</td><td>Zona 2</td></tr>
+    <tr><th>Zagueros (fondo)</th><td>Zona 5</td><td>Zona 6</td><td>Zona 1 (saque)</td></tr>
+  </table>
+  <h2>¿Cuándo y cómo se rota?</h2>
+  <p>Cuando el equipo que <strong>recibe</strong> el saque gana la jugada, obtiene un punto y también el derecho al saque, y sus jugadores rotan <strong>una posición en el sentido de las agujas del reloj</strong>: el de la zona 2 pasa a la 1 para sacar, el de la 1 a la 6, el de la 6 a la 5, y así sucesivamente. Gracias a la rotación, todos los jugadores pasan por todas las posiciones, en la red y en el fondo.</p>
+  <h2>La regla de posición en el momento del saque</h2>
+  <p>No es necesario que los jugadores formen una figura exacta en sus zonas. Basta con que, al momento del golpe del saque, cada <strong>delantero</strong> tenga al menos un pie más adelantado que el zaguero correspondiente, y que dentro de la misma línea los <strong>laterales</strong> tengan al menos un pie más hacia afuera que el jugador del centro. Después del saque, los jugadores pueden moverse libremente.</p>
+  <h2>Características básicas del voleibol</h2>
+  <ul>
+    <li>Lo practican hombres y mujeres; lo juegan dos equipos en una cancha dividida por una red.</li>
+    <li>El objetivo es enviar el balón por encima de la red para que toque el suelo de la cancha contraria.</li>
+    <li>En cada punto el balón se pone en juego con un saque.</li>
+    <li>Cada equipo tiene tres toques para devolver el balón, sin contar el toque del bloqueo.</li>
+    <li>La jugada continúa hasta que el balón toca el suelo, sale fuera, un equipo no logra devolverlo correctamente o comete una falta.</li>
+    <li>Cada jugada ganada es un punto. Gana el partido el equipo que gana tres de los cinco sets.</li>
+  </ul>
+  <div class="act">
+    <h3>Actividad 1. Completa las ideas</h3>
+    <ol>
+      <li>El voleibol se juega entre ______ equipos.</li>
+      <li>El objetivo del juego es enviar el balón por encima de la ______.</li>
+      <li>Cada equipo dispone de ______ toques para devolver el balón.</li>
+      <li>Cuando el equipo receptor gana la jugada obtiene un ______ y el derecho al ______.</li>
+      <li>Los jugadores rotan en el sentido de las ______.</li>
+      <li>El equipo ganador es el que obtiene ______ de los cinco sets.</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Analiza y responde</h3>
+    <ol>
+      <li>¿Qué ocurre cuando un equipo recibe el saque y gana la jugada?</li>
+      <li>¿En qué momento deben respetar los jugadores sus posiciones de rotación?</li>
+      <li>¿Por qué es importante la rotación en el voleibol?</li>
+      <li>¿Cuántos toques puede realizar un equipo antes de enviar el balón al otro lado?</li>
+      <li>¿Cuándo termina una jugada?</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 3. Organizador gráfico</h3>
+    <table class="blank">
+      <tr><th>Concepto</th><th>Explicación</th></tr>
+      <tr><td>Objetivo del juego</td><td></td></tr>
+      <tr><td>Número de jugadores</td><td></td></tr>
+      <tr><td>Número de toques permitidos</td><td></td></tr>
+      <tr><td>¿Cuándo se rota?</td><td></td></tr>
+      <tr><td>Sentido de la rotación</td><td></td></tr>
+      <tr><td>¿Cómo se gana un partido?</td><td></td></tr>
+    </table>
+    <p><strong>Reflexión final (5 a 6 líneas):</strong> ¿por qué crees que todos los jugadores deben aprender a jugar en diferentes posiciones gracias a la rotación?</p>
+  </div>
+</article>
+
+<article class="post" id="reglas-voleibol" data-p="3" data-t="Reglas del voleibol: faltas, sets y sanciones" data-s="Las principales faltas, cómo se gana un set, tiempos fuera y la escala de sanciones por conducta incorrecta.">
+  <div class="meta">Periodo 3 · Voleibol</div>
+  <h1>Reglas del voleibol: faltas, sets y sanciones</h1>
+  <p class="lead">Este tema se trabajó con un video sobre el reglamento y se reforzó con un cuestionario. La síntesis siguiente sigue el reglamento oficial de la Federación Internacional de Voleibol (FIVB).</p>
+  <h2>Principales tipos de faltas</h2>
+  <ol>
+    <li><strong>Falta de saque:</strong> sacar fuera de turno, pisar la línea de fondo, tardar más de lo permitido o enviar el balón a la red o fuera.</li>
+    <li><strong>Falta de posición o de rotación:</strong> los jugadores no están en el orden correcto en el momento del saque.</li>
+    <li><strong>Cuatro toques:</strong> el equipo toca el balón más de tres veces antes de devolverlo.</li>
+    <li><strong>Doble toque:</strong> un jugador toca el balón dos veces seguidas (salvo después del bloqueo o en el primer toque del equipo en una misma acción).</li>
+    <li><strong>Balón retenido:</strong> el balón es sujetado, acompañado o lanzado en lugar de golpeado.</li>
+    <li><strong>Toque de red:</strong> tocar la red durante una acción de juego.</li>
+    <li><strong>Invasión:</strong> pasar al campo contrario por debajo de la red interfiriendo al rival, o tocar el balón en el espacio contrario antes del ataque rival.</li>
+    <li><strong>Faltas de ataque y de bloqueo:</strong> por ejemplo, un zaguero que remata desde la zona de ataque por encima de la red o que participa en un bloqueo.</li>
+  </ol>
+  <h2>Sets, tiempos e intervalos</h2>
+  <ul>
+    <li>Un set (del 1.º al 4.º) lo gana el equipo que llega a <strong>25 puntos</strong> con ventaja mínima de dos. Si hay empate 24-24, se sigue jugando hasta lograr dos puntos de ventaja.</li>
+    <li>Con empate 2-2 en sets, el <strong>quinto set</strong> se juega a <strong>15 puntos</strong>, y los equipos cambian de campo cuando uno llega a <strong>8 puntos</strong>.</li>
+    <li>Cada equipo puede pedir como máximo <strong>dos tiempos fuera por set</strong>, de <strong>30 segundos</strong> cada uno.</li>
+    <li>El intervalo normal entre sets es de <strong>3 minutos</strong>.</li>
+    <li>Solo el <strong>capitán en juego</strong> puede pedir al árbitro explicaciones sobre la aplicación de las reglas.</li>
+    <li>Un equipo que se niega a jugar es declarado ausente y pierde el partido 0-3. Un equipo declarado <strong>incompleto</strong> pierde el set o el partido, conservando los puntos que había ganado.</li>
+  </ul>
+  <h2>Demoras</h2>
+  <p>Prolongar una interrupción o un intervalo, retrasar el saque o una sustitución son demoras. La primera demora del equipo en el partido se sanciona con una <strong>amonestación por demora</strong>; las siguientes, con una <strong>penalización por demora</strong> (punto y saque para el adversario).</p>
+  <h2>Escala de sanciones por conducta incorrecta</h2>
+  <table>
+    <tr><th>Sanción</th><th>Tarjeta</th><th>Consecuencia</th></tr>
+    <tr><td>Advertencia</td><td>Verbal o tarjeta amarilla</td><td>Por conducta menor. No implica pérdida de punto.</td></tr>
+    <tr><td>Penalización</td><td>Roja</td><td>Punto y saque para el adversario.</td></tr>
+    <tr><td>Expulsión</td><td>Roja y amarilla juntas en una mano</td><td>El jugador sale del resto del set y va al área de castigo.</td></tr>
+    <tr><td>Descalificación</td><td>Roja y amarilla separadas</td><td>Debe abandonar el área de control de la competencia por el resto del partido.</td></tr>
+  </table>
+  <table>
+    <tr><th>Conducta</th><th>Primera vez</th></tr>
+    <tr><td>Conducta grosera (contra las buenas costumbres)</td><td>Penalización</td></tr>
+    <tr><td>Conducta ofensiva (insultos, gestos)</td><td>Expulsión</td></tr>
+    <tr><td>Agresión física o intento de agresión</td><td>Descalificación</td></tr>
+  </table>
+  <p>Las sanciones por conducta incorrecta son <strong>acumulativas durante todo el partido</strong>; si se repite la conducta, la sanción sube un escalón.</p>
+  <div class="act">
+    <h3>Actividad con el video «Reglas del voleibol»</h3>
+    <ol>
+      <li>Según el video, ¿en qué consisten cada una de las 8 clases de faltas?</li>
+      <li>Según el video, ¿en qué casos se aplica un castigo, una expulsión y una descalificación?</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Preguntas de repaso (refuerzo del periodo 3)</h3>
+    <ol>
+      <li>¿Cuántos puntos se necesitan para ganar un set normal y con qué ventaja?</li>
+      <li>Si un set queda empatado 24-24, ¿cuándo termina?</li>
+      <li>¿A cuántos puntos se juega el quinto set y cuándo se cambia de campo?</li>
+      <li>¿Cuánto dura un tiempo fuera y cuántos puede pedir un equipo por set?</li>
+      <li>¿Cuál es el intervalo normal entre sets?</li>
+      <li>¿Quién es el único miembro del equipo que puede pedir explicaciones al árbitro?</li>
+      <li>¿Qué sanción corresponde a una conducta grosera por primera vez? ¿Y a una conducta ofensiva?</li>
+      <li>¿Qué conducta se sanciona con descalificación inmediata?</li>
+      <li>¿Qué tarjetas muestra el árbitro para indicar una expulsión?</li>
+      <li>¿Qué ocurre con un jugador descalificado?</li>
+      <li>¿Qué sucede si un equipo se niega a jugar?</li>
+      <li>¿Qué acción se considera una demora de juego?</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="biomecanica" data-p="3" data-t="Biomecánica del cuidado y condición física en deportes de red y muro" data-s="Calentamiento, estiramiento, recuperación, ergonomía, sistemas energéticos, propiocepción y fatiga neuromuscular.">
+  <div class="meta">Periodo 3 · Actividad integradora</div>
+  <h1>Biomecánica del cuidado y condición física en deportes de red y muro</h1>
+  <h2>La biomecánica del cuidado: cómo proteger el cuerpo</h2>
+  <p>El cuerpo humano es como una máquina perfecta: cada vez que nos movemos, la fuerza se reparte por músculos, tendones y articulaciones. Si le exigimos demasiado o entrenamos sin cuidado, los tejidos pueden sufrir pequeñas lesiones. Para evitarlo hay que entender cuatro aspectos: calentamiento, estiramiento, recuperación y ergonomía.</p>
+  <p><strong>Calentamiento.</strong> Su objetivo principal es subir la temperatura de los músculos. Al calentarse, las arterias se abren (<em>vasodilatación</em>) y llevan más sangre con oxígeno a las células. Además, las articulaciones producen <em>líquido sinovial</em>, un lubricante natural que reduce el roce entre los huesos. Un músculo frío es como una liga congelada: si se estira de golpe, se rompe.</p>
+  <p><strong>Estiramiento.</strong> Antes del ejercicio debe ser <strong>dinámico</strong> (con movimiento controlado): activa los <em>husos neuromusculares</em>, que preparan las fibras para la acción. Después del ejercicio debe ser <strong>estático</strong> (mantener una posición fija): activa los <em>órganos tendinosos de Golgi</em>, que detectan la tensión y ordenan al músculo relajarse.</p>
+  <p><strong>Recuperación.</strong> Es el momento en que el cuerpo se hace más fuerte. El ejercicio intenso produce pequeñas roturas en las fibras musculares que se reparan sobre todo durante el sueño profundo, cuando la <em>hipófisis</em> libera la hormona del crecimiento. Hidratarse y comer bien para reponer el glucógeno ayuda a reconstruir el músculo. Sin descanso suficiente aparece el <strong>sobreentrenamiento</strong>, un cansancio constante.</p>
+  <p><strong>Ergonomía.</strong> Adapta el movimiento a la estructura del cuerpo. Un calzado sin amortiguación o una mala técnica de carrera cambian cómo se transmite el impacto y cargan ligamentos y meniscos. Moverse con técnica correcta protege el cuerpo y alarga la vida deportiva.</p>
+  <h2>Motor y reflejos: la condición física en los deportes de red y muro</h2>
+  <p>Tenis, pádel, voleibol y squash se basan en movimientos rápidos y explosivos: acelerar al máximo, frenar de golpe, golpear y volver a empezar. La condición física es la capacidad del sistema nervioso y los músculos para trabajar juntos. La <strong>velocidad de reacción</strong> y la <strong>propiocepción</strong> (saber dónde está cada parte del cuerpo sin mirarla) permiten cambiar de dirección sin perder el equilibrio.</p>
+  <table>
+    <tr><th>Sistema energético</th><th>Cuándo actúa</th></tr>
+    <tr><td>Fosfágenos (ATP-fosfocreatina)</td><td>Jugadas rápidas y potentes (remate, pique corto). Muy potente, dura solo unos segundos.</td></tr>
+    <tr><td>Anaeróbico (glucosa sin oxígeno)</td><td>Puntos largos. Produce lactato y la sensación de ardor muscular.</td></tr>
+    <tr><td>Aeróbico</td><td>Pausas entre puntos: elimina el lactato y rellena el «tanque» de fosfágenos para el siguiente esfuerzo.</td></tr>
+  </table>
+  <p>Sin buena condición física aparece la <strong>fatiga neuromuscular</strong>: el cerebro da la orden, pero el músculo no responde con la misma velocidad. Se rompe la <strong>cadena cinética</strong> —la transferencia de energía de las piernas a la cadera, el tronco y la mano— y el jugador golpea solo con el brazo: tiros débiles, poca precisión y sobrecarga en muñeca, codo u hombro.</p>
+  <h2>Vocabulario</h2>
+  <ul>
+    <li><strong>Biomecánica:</strong> estudio de las fuerzas que actúan sobre los seres vivos y sus efectos.</li>
+    <li><strong>Vasodilatación:</strong> ensanchamiento de los vasos sanguíneos, que permite mayor flujo de sangre.</li>
+    <li><strong>Propiocepción:</strong> capacidad de sentir la posición y el movimiento del cuerpo sin verlo.</li>
+    <li><strong>Fosfágenos:</strong> compuestos de alta energía almacenados en el músculo para esfuerzos intensos y cortos.</li>
+    <li><strong>Anaeróbico:</strong> proceso que ocurre sin oxígeno.</li>
+    <li><strong>Lactato:</strong> subproducto del metabolismo anaeróbico que se acumula durante el ejercicio intenso.</li>
+    <li><strong>Neuromuscular:</strong> relativo a la conexión entre nervios y músculos.</li>
+  </ul>
+  <div class="act">
+    <h3>Preguntas de repaso (actividad integradora)</h3>
+    <ol>
+      <li>¿Cuál es el propósito principal del calentamiento?</li>
+      <li>¿Qué función cumple el líquido sinovial?</li>
+      <li>¿Qué efecto tiene la vasodilatación durante el calentamiento?</li>
+      <li>¿Qué tipo de estiramiento se recomienda antes del ejercicio y cuál después? ¿Por qué?</li>
+      <li>¿Qué función cumplen los órganos tendinosos de Golgi?</li>
+      <li>¿Qué hormona se libera durante el sueño profundo y para qué sirve?</li>
+      <li>¿Qué sucede si no se descansa lo suficiente después de un ejercicio intenso?</li>
+      <li>¿Qué es la ergonomía en el deporte?</li>
+      <li>¿Qué sistema energético se usa en las jugadas rápidas y potentes?</li>
+      <li>¿Qué sistema rellena el tanque de fosfágenos durante las pausas?</li>
+      <li>¿Qué es la propiocepción?</li>
+      <li>¿Qué es la cadena cinética y qué pasa cuando se rompe?</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="contusiones" data-p="3" data-t="Lesiones en deportes de red/muro: las contusiones" data-s="Qué es una contusión, grados, síntomas, zonas propensas en voleibol, diferencia con una fractura, prevención y primeros auxilios.">
+  <div class="meta">Periodo 3 · Indicador 3.3</div>
+  <h1>Lesiones en deportes de red/muro: las contusiones</h1>
+  <div class="ind"><strong>Indicador 3.3:</strong> Identifica y evalúa de manera práctica los riesgos de lesión frecuentes en la práctica escolar, aplicando protocolos básicos de calentamiento y prevención adaptados a los deportes trabajados.</div>
+  <h2>¿Qué es una contusión?</h2>
+  <p>Según la Real Academia Española, una contusión es el daño que recibe alguna parte del cuerpo por un golpe que no causa herida exterior. En términos clínicos, es una lesión de los tejidos blandos que produce un hematoma (equimosis) sin ruptura de la piel. En el voleibol son de las lesiones más frecuentes, por los contactos con el balón, el suelo, la red, los postes o con otros jugadores. Al ser una lesión cerrada, el riesgo de infección es muy bajo.</p>
+  <h2>Tipos de contusión según su gravedad</h2>
+  <ul>
+    <li><strong>Simple:</strong> enrojecimiento y dolor moderado, por ejemplo tras un balonazo. Se recupera en pocos días.</li>
+    <li><strong>Primer grado:</strong> rotura de pequeños vasos, hematoma visible y dolor localizado; frecuente tras una «plancha» o al golpear repetidamente el balón con los antebrazos.</li>
+    <li><strong>Segundo grado:</strong> además del hematoma hay inflamación importante y más dolor, que puede dificultar el movimiento; por caídas fuertes o choques entre compañeros.</li>
+    <li><strong>Tercer grado:</strong> afecta tejidos profundos y puede asociarse a lesiones musculares, ligamentarias o fracturas; poco frecuente, por caídas violentas o impactos contra postes.</li>
+  </ul>
+  <h2>Síntomas y zonas más propensas</h2>
+  <p>Dolor en la zona del golpe, enrojecimiento, inflamación, hematoma o moretón y sensibilidad al tacto; si afecta una articulación, puede disminuir temporalmente la movilidad. En el voleibol se golpean con más frecuencia las <strong>rodillas</strong> (caídas y desplazamientos defensivos), los <strong>antebrazos</strong> (recepción), los <strong>dedos y manos</strong> (bloqueos y remates), <strong>caderas, glúteos y codos</strong> (planchas), los <strong>tobillos</strong> (caer sobre el pie de un compañero) y los <strong>hombros</strong> (caídas laterales).</p>
+  <h2>Contusión o fractura</h2>
+  <table>
+    <tr><th></th><th>Contusión</th><th>Fractura</th></tr>
+    <tr><td>Dolor</td><td>Localizado, disminuye con el reposo</td><td>Intenso y constante</td></tr>
+    <tr><td>Inflamación</td><td>Moderada, hematoma superficial</td><td>Considerable</td></tr>
+    <tr><td>Movimiento</td><td>Se conserva parcialmente</td><td>Incapacidad para mover o apoyar</td></tr>
+    <tr><td>Deformidad</td><td>No</td><td>Puede haber deformidad visible</td></tr>
+  </table>
+  <p>Ante la sospecha de fractura o duda sobre la gravedad, hay que acudir a un centro médico para una evaluación y, si es necesario, una radiografía.</p>
+  <h2>Prevención</h2>
+  <p>Aprender la técnica de caída, usar rodilleras y calzado con buena amortiguación, mantener la cancha limpia y seca, calentar antes de la actividad, ejecutar bien la recepción y la defensa, y comunicarse con los compañeros para evitar choques.</p>
+  <h2>Tiempo de recuperación aproximado</h2>
+  <table>
+    <tr><th>Grado</th><th>Tiempo</th></tr>
+    <tr><td>Contusión leve</td><td>3 a 7 días</td></tr>
+    <tr><td>Primer grado</td><td>1 a 2 semanas</td></tr>
+    <tr><td>Segundo grado</td><td>2 a 4 semanas</td></tr>
+    <tr><td>Tercer grado</td><td>Más de un mes, según la lesión asociada</td></tr>
+  </table>
+  <h2>Primeros auxilios: protocolo RICE (primeras 48 horas)</h2>
+  <ul>
+    <li><strong>R — Reposo</strong> de la zona lesionada.</li>
+    <li><strong>I — Hielo</strong> durante 15 a 20 minutos cada 2 o 3 horas, envuelto en una tela.</li>
+    <li><strong>C — Compresión</strong> con vendaje si es necesario.</li>
+    <li><strong>E — Elevación</strong> de la extremidad para disminuir la inflamación.</li>
+  </ul>
+  <p>No aplicar calor ni masajes intensos durante las primeras 48 horas. Cualquier medicamento (antiinflamatorios en gel, pomadas o analgésicos) debe usarse solo bajo indicación médica; hay que evitar la automedicación, especialmente en deportistas menores de edad.</p>
+  <h2>Rehabilitación y cuándo acudir al médico</h2>
+  <p>Cuando bajan el dolor y la inflamación se inicia una rehabilitación progresiva: movilidad suave, estiramientos controlados, fortalecimiento, ejercicios de propiocepción y, al final, gestos propios del voleibol. Se vuelve al deporte cuando no hay dolor y se han recuperado el movimiento y la fuerza. Se debe acudir al médico si el dolor es muy intenso, la inflamación aumenta rápido, hay deformidad, no se puede apoyar o mover la articulación, el hematoma es muy grande, hay pérdida de fuerza o sensibilidad, o no hay mejoría tras varios días.</p>
+  <div class="act">
+    <h3>Actividad 1. Cuadro comparativo</h3>
+    <table class="blank">
+      <tr><th>Aspecto</th><th>Contusión</th><th>Fractura</th></tr>
+      <tr><td>¿Qué la produce?</td><td></td><td></td></tr>
+      <tr><td>Síntomas principales</td><td></td><td></td></tr>
+      <tr><td>¿Existe deformidad?</td><td></td><td></td></tr>
+      <tr><td>¿Se puede mover la zona lesionada?</td><td></td><td></td></tr>
+    </table>
+    <p>Al finalizar, escribe una conclusión de cinco líneas explicando por qué es importante diferenciar una contusión de una fractura.</p>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Preguntas de análisis</h3>
+    <ol>
+      <li>¿Por qué un jugador con una contusión no debe regresar inmediatamente al partido, aunque el dolor haya disminuido?</li>
+      <li>Dos jugadores sufren una caída: uno tiene un hematoma y puede mover la pierna; el otro siente dolor intenso, no puede apoyarla y se ve una deformidad. ¿Cómo determinarías cuál podría tener una fractura?</li>
+      <li>Si fueras capitán de un equipo de voleibol, ¿qué medidas aplicarías antes, durante y después de los entrenamientos para disminuir las contusiones?</li>
+      <li>¿Qué es una contusión y por qué es frecuente en el voleibol?</li>
+      <li>Menciona cuatro síntomas principales de una contusión.</li>
+      <li>Explica al menos tres diferencias entre una contusión y una fractura.</li>
+      <li>¿Qué harías como primeros auxilios aplicando el protocolo RICE?</li>
+      <li>¿Qué medidas de prevención pueden aplicarse en entrenamientos y partidos?</li>
+      <li>¿Por qué no se debe aplicar calor ni masajear durante las primeras 48 horas?</li>
+      <li>Un compañero recibe un fuerte golpe en la rodilla, tiene inflamación y un hematoma, pero insiste en seguir jugando. ¿Qué le recomendarías y por qué?</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="esguinces-sobrecarga" data-p="3" data-t="Esguinces y sobrecarga muscular" data-s="Lesión aguda frente a lesión por sobreuso: zonas afectadas, grados, tratamiento y prevención, con casos prácticos.">
+  <div class="meta">Periodo 3 · Indicador 3.3</div>
+  <h1>Esguinces y sobrecarga muscular</h1>
+  <div class="ind"><strong>Indicador 3.3:</strong> Identifica y evalúa de manera práctica los riesgos de lesión frecuentes en la práctica escolar, aplicando protocolos básicos de calentamiento y prevención adaptados a los deportes trabajados.</div>
+  <p class="lead">Los deportes de red y muro, como el voleibol, son explosivos y con cambios constantes de dirección: saltos verticales, frenadas bruscas, desplazamientos laterales y gestos repetidos por encima de la cabeza (remates y saques). Por eso aparecen dos grandes grupos de lesiones: las causadas por un <strong>evento traumático agudo</strong> y las derivadas de la <strong>acumulación de microtraumatismos</strong>.</p>
+  <h2>1. Esguinces: lesiones de ligamentos por impacto y torsión</h2>
+  <p>Un esguince es la distensión o rotura, parcial o total, de uno o varios ligamentos, las bandas de tejido que unen los huesos dentro de una articulación. Ocurren por torsiones inesperadas, caídas desequilibradas o aterrizajes defectuosos, por ejemplo sobre el pie de otro jugador.</p>
+  <ul>
+    <li><strong>Tobillo:</strong> la lesión aguda más frecuente en voleibol. Se produce por inversión forzada (la planta del pie gira hacia adentro), afectando sobre todo al ligamento talofibular anterior; típico al caer de un bloqueo o remate sobre el pie de alguien.</li>
+    <li><strong>Rodilla:</strong> afecta al ligamento colateral medial o al cruzado anterior; por desaceleraciones bruscas, giros con el pie fijo o aterrizajes sobre una pierna con la rodilla hacia adentro.</li>
+    <li><strong>Dedos:</strong> muy común en bloqueo o recepción, cuando el balón golpea la punta del dedo extendido.</li>
+  </ul>
+  <table>
+    <tr><th>Grado</th><th>Daño</th><th>Signos</th></tr>
+    <tr><td>I (leve)</td><td>Distensión sin pérdida de estabilidad</td><td>Dolor leve, inflamación mínima, se puede apoyar</td></tr>
+    <tr><td>II (moderado)</td><td>Rotura parcial de fibras</td><td>Dolor moderado a intenso, hinchazón, hematoma, inestabilidad leve</td></tr>
+    <tr><td>III (grave)</td><td>Rotura total del ligamento</td><td>Dolor agudo, incapacidad funcional, inestabilidad grave; requiere atención especializada</td></tr>
+  </table>
+  <p><strong>Tratamiento (48–72 h):</strong> protocolo RICE — reposo sin cargar peso, hielo envuelto en tela 15–20 min cada 2–3 h (nunca directo sobre la piel), vendaje elástico sin cortar la circulación y elevación por encima del corazón. Evitar masajes, calor y alcohol en las primeras 48 horas. Si hay dolor intenso o no se puede mover la zona, acudir al médico para descartar una fractura.</p>
+  <h2>2. Sobrecarga muscular: la fatiga por sobreuso</h2>
+  <p>A diferencia del esguince, la sobrecarga es progresiva: una contracción involuntaria, continua y excesiva de las fibras musculares por exigir más de lo que el músculo resiste o por no darle tiempo de recuperación. La repetición de gestos intensos agota las reservas de energía, acumula desechos y aumenta la rigidez.</p>
+  <ul>
+    <li><strong>Pantorrillas:</strong> por los saltos constantes y la postura en punta de pies.</li>
+    <li><strong>Zona lumbar:</strong> por la extensión repetida de la espalda en el remate y las flexiones para recuperar bolas bajas.</li>
+    <li><strong>Antebrazo y hombro:</strong> por la aceleración y desaceleración del brazo al golpear.</li>
+  </ul>
+  <p><strong>Síntomas:</strong> pesadez, rigidez, dolor sordo al tacto o al contraer y pérdida de flexibilidad y rendimiento. Ignorarla puede llevar a una contractura, una microrrotura o un desgarro.</p>
+  <p><strong>Tratamiento:</strong> descanso activo y menos carga (suspender saltos y remates unos días); calor local pasadas las primeras 24 horas (15–20 min); estiramientos estáticos suaves de 15 a 20 segundos sin rebotar; masaje suave; buena hidratación y reposición de minerales.</p>
+  <h2>Resumen comparativo</h2>
+  <table>
+    <tr><th>Criterio</th><th>Esguince</th><th>Sobrecarga muscular</th></tr>
+    <tr><td>Tejido afectado</td><td>Ligamentos (unen hueso con hueso)</td><td>Músculos (fibras contráctiles)</td></tr>
+    <tr><td>Origen</td><td>Traumático y agudo: torsión, mal apoyo, caída</td><td>Progresivo: sobreuso y fatiga</td></tr>
+    <tr><td>Inicio de síntomas</td><td>Instantáneo</td><td>Gradual, durante o después de la sesión</td></tr>
+    <tr><td>Prevención clave</td><td>Técnica de caída, calzado con buen agarre, vendaje</td><td>Dosificar cargas, descansar, estirar e hidratarse</td></tr>
+  </table>
+  <div class="act">
+    <h3>Actividad 1. ¿Esguince o sobrecarga?</h3>
+    <ol>
+      <li>Carlos saltó a bloquear, cayó sobre el pie de un compañero y se le dobló el tobillo hacia adentro.</li>
+      <li>Mariana siente la espalda baja muy dura y pesada tras entrenar 3 horas seguidas haciendo remates sin descansar.</li>
+      <li>A Mateo le pegó el balón en la punta del pulgar al defender un remate; sintió dolor agudo e hinchazón inmediata.</li>
+      <li>Valeria siente rigidez y molestia en las pantorrillas tras jugar pádel todo el fin de semana sin estirar.</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Cuadro «Esguince vs. sobrecarga»</h3>
+    <table class="blank">
+      <tr><th>Criterio</th><th>Esguince</th><th>Sobrecarga muscular</th></tr>
+      <tr><td>1. ¿Qué tejido se lesiona?</td><td></td><td></td></tr>
+      <tr><td>2. ¿Cómo ocurre? (de golpe o poco a poco)</td><td></td><td></td></tr>
+      <tr><td>3. Dos síntomas principales</td><td></td><td></td></tr>
+      <tr><td>4. Una forma de prevenirlo</td><td></td><td></td></tr>
+    </table>
+  </div>
+  <div class="act">
+    <h3>Actividad 3. El caso de Sofía</h3>
+    <p>Sofía es rematadora en el equipo de voleibol de la escuela. Ayer tuvo un entrenamiento muy intenso con gran cantidad de saltos y remates, no hizo estiramientos ni enfriamiento y se fue directo a casa. Hoy siente los hombros, el antebrazo y las pantorrillas muy rígidos y pesados, con una molestia sorda al moverse, aunque no sufrió caídas, choques ni torceduras. Responde como si fueras el fisioterapeuta del equipo:</p>
+    <ol>
+      <li><strong>Diagnóstico:</strong> ¿esguince o sobrecarga muscular? Explica por qué.</li>
+      <li><strong>Análisis de causas:</strong> ¿qué errores cometió antes, durante o después del entrenamiento?</li>
+      <li><strong>Plan de acción:</strong> escribe dos consejos para recuperarse y evitar que vuelva a ocurrir.</li>
+    </ol>
+  </div>
+</article>
+<!-- ===================== PERIODO 4 ===================== -->
+<article class="post" id="historia-ajedrez" data-p="4" data-t="Historia del ajedrez" data-s="De la India al ajedrez digital: chaturanga, Persia, mundo islámico, Europa, campeonatos, FIDE y computadoras.">
+  <div class="meta">Periodo 4 · Ética, metacognición y proyecto de vida activa</div>
+  <h1>Historia del ajedrez: lo que realmente sabemos</h1>
+  <div class="ind"><strong>Indicador 4.1:</strong> Utiliza los principios estratégicos del ajedrez (planificación y valoración de alternativas) para analizar y resolver situaciones simuladas relacionadas con la toma de decisiones en deportes y proyectos de vida activa.</div>
+  <p class="lead">La historia del ajedrez abarca unos 1,500 años, pero hay que distinguir lo documentado de las hipótesis. No se conoce a una persona que lo haya inventado ni un documento que diga exactamente cuándo y dónde nació.</p>
+  <h2>1. El origen: la India</h2>
+  <p>La explicación más aceptada sitúa su origen en la India, probablemente durante el Imperio Gupta, hacia el siglo VI d. C. Su antecesor más antiguo conocido es el <strong>chaturanga</strong>, palabra sánscrita que significa «cuatro partes», en referencia a las cuatro divisiones del ejército: infantería, caballería, elefantes y carros. No conservamos sus reglas completas, así que no sabemos exactamente cómo se jugaba.</p>
+  <h2>2. De la India a Persia y al mundo islámico</h2>
+  <p>En el Imperio sasánida de Persia recibió el nombre de <strong>chatrang</strong>. De allí vienen <em>shāh</em> (rey) y <em>shāh māt</em>, origen de «jaque mate». Tras la conquista musulmana de Persia en el siglo VII pasó al mundo islámico como <strong>shatranj</strong>, con tratados y grandes jugadores como al-Adli y al-Suli (siglo IX): ya existía una tradición técnica desarrollada siglos antes del ajedrez moderno.</p>
+  <h2>3. Europa y el nacimiento del ajedrez moderno</h2>
+  <p>Llegó a Europa en la Edad Media, en especial por la península ibérica y las rutas comerciales con el mundo islámico. Entre finales del siglo XV y comienzos del XVI la <strong>dama</strong> pasó a moverse cualquier número de casillas en línea recta o diagonal y el <strong>alfil</strong> adquirió su movimiento actual. El juego se volvió más rápido y táctico: es el nacimiento del ajedrez moderno, fruto de una evolución y no de una sola persona.</p>
+  <h2>4. Tratados, maestros y competencia</h2>
+  <ul>
+    <li><strong>Ruy López de Segura</strong> (Zafra, c. 1530) publicó en 1561 un libro sobre el juego; la Apertura Española lleva su nombre.</li>
+    <li><strong>François-André Danican Philidor</strong> (1726–1795) publicó en 1749 su análisis del juego y destacó la importancia de los peones: «los peones son el alma del ajedrez».</li>
+    <li>En los siglos XVIII y XIX los cafés de París y Londres reunían a los jugadores; surgieron clubes, revistas y torneos.</li>
+    <li>En <strong>1886</strong>, Wilhelm Steinitz venció a Johannes Zukertort y fue el primer campeón mundial reconocido; también aportó principios estratégicos.</li>
+    <li>En <strong>1924</strong> se fundó la <strong>FIDE</strong>, la Federación Internacional de Ajedrez.</li>
+  </ul>
+  <h2>5. Del siglo XX al ajedrez digital</h2>
+  <p>La escuela soviética (Botvínnik, Smyslov, Tal, Petrosian, Spassky y después Kárpov y Kaspárov) dominó gran parte del siglo XX con entrenamiento riguroso. En <strong>1972</strong> Bobby Fischer venció a Boris Spassky en Reikiavik, un encuentro con enorme repercusión en plena Guerra Fría. En <strong>1985</strong> Garry Kaspárov fue campeón mundial con 22 años, y en <strong>1997</strong> la computadora Deep Blue de IBM lo derrotó en un encuentro a seis partidas. Hoy se usan bases de datos, motores de análisis y plataformas en línea, y aunque los programas superan a los humanos, el ajedrez sigue siendo una disciplina competitiva viva.</p>
+  <p class="flow">India (s. VI) → Persia (chatrang) → mundo islámico (shatranj) → Europa medieval → reglas modernas (s. XV–XVI) → 1886 primer campeonato → 1924 FIDE → 1997 Deep Blue → ajedrez digital</p>
+  <p><strong>Aclaración:</strong> muchas historias populares (como la del inventor que creó el juego para un rey) no están demostradas. Lo seguro es que el ajedrez evolucionó desde juegos de estrategia de la India, pasó por Persia y el mundo islámico y se transformó en Europa.</p>
+  <div class="act">
+    <h3>Actividad: cinco preguntas sobre la historia del ajedrez</h3>
+    <ol>
+      <li>¿Dónde y aproximadamente cuándo surgió el antecesor del ajedrez, y cómo se llamaba?</li>
+      <li>¿Cómo pasó el juego de la India a Persia y luego al mundo islámico?</li>
+      <li>¿Qué cambios importantes se produjeron en las reglas entre los siglos XV y XVI?</li>
+      <li>¿Quién fue Wilhelm Steinitz y por qué es importante?</li>
+      <li>¿Cómo ha cambiado el ajedrez desde la aparición de las computadoras?</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="principios-ajedrez" data-p="4" data-t="Principios estratégicos del ajedrez y toma de decisiones" data-s="Las piezas y sus movimientos, principios de la apertura, estrategia y táctica, y la transferencia del ajedrez a la vida activa.">
+  <div class="meta">Periodo 4 · Tema 1</div>
+  <h1>Principios estratégicos del ajedrez, planificación y toma de decisiones</h1>
+  <div class="ind"><strong>Indicador 4.1:</strong> Utiliza los principios estratégicos del ajedrez (planificación y valoración de alternativas) para analizar y resolver situaciones simuladas relacionadas con la toma de decisiones en deportes y proyectos de vida activa.</div>
+  <h2>El ajedrez como modelo del pensamiento estratégico</h2>
+  <p>El ajedrez es mucho más que un juego de mesa: es un modelo a pequeña escala del pensamiento estratégico humano, donde cada movimiento refleja un proceso consciente de análisis, evaluación y responsabilidad. En su centro está la <strong>anticipación</strong>, la capacidad de prever las intenciones del oponente y proyectar escenarios antes de actuar. Un jugador experimentado no mueve por impulso o por azar: sigue un plan basado en principios como el control del centro, el desarrollo armónico de las piezas, la seguridad del rey y la valoración de la estructura de peones.</p>
+  <p>Tomar decisiones en ajedrez exige calcular variantes y sopesar riesgos y beneficios: identificar las opciones, evaluar las amenazas, prever las respuestas del rival y elegir la alternativa que más oportunidades da con menos debilidades. Cada decisión genera consecuencias irreversibles en la partida —«pieza tocada, pieza movida»—, lo que estimula la flexibilidad mental, la autodisciplina y la capacidad de adaptarse con serenidad.</p>
+  <h2>Las piezas y sus movimientos</h2>
+  <p>Se juega en un tablero de 64 casillas (8 × 8) y cada jugador empieza con 16 piezas.</p>
+  <table>
+    <tr><th>Pieza</th><th>Movimiento</th><th>Valor relativo</th></tr>
+    <tr><td>Peón</td><td>Avanza una casilla (dos en su primer movimiento) y captura en diagonal.</td><td>1</td></tr>
+    <tr><td>Caballo</td><td>Se mueve en «L»; es la única pieza que salta sobre las demás.</td><td>3</td></tr>
+    <tr><td>Alfil</td><td>En diagonal.</td><td>3</td></tr>
+    <tr><td>Torre</td><td>En línea recta (horizontal o vertical).</td><td>5</td></tr>
+    <tr><td>Dama</td><td>Combina torre y alfil.</td><td>9</td></tr>
+    <tr><td>Rey</td><td>Una casilla en cualquier dirección.</td><td>—</td></tr>
+  </table>
+  <p>Hay tres movimientos especiales: el <strong>enroque</strong> (rey y torre se mueven a la vez para proteger al rey), la <strong>captura al paso</strong> y la <strong>promoción</strong> (el peón que llega a la última fila se convierte en otra pieza, normalmente dama). La partida termina con <strong>jaque mate</strong> o en <strong>tablas</strong> (empate).</p>
+  <h2>Principios de la apertura</h2>
+  <p>La partida tiene tres fases: apertura, medio juego y final. En la apertura se aplican tres principios: <strong>controlar el centro</strong> (desde allí las piezas alcanzan más casillas), <strong>desarrollar las piezas</strong> (sacar caballos y alfiles sin mover varias veces la misma) y <strong>poner al rey a salvo</strong> mediante el enroque.</p>
+  <h2>Estrategia y táctica</h2>
+  <p>La <strong>estrategia</strong> es el plan general a largo plazo: qué quiero lograr y por dónde. La <strong>táctica</strong> es la secuencia concreta de jugadas que da una ventaja inmediata. Antes de cada jugada, el jugador busca varias «jugadas candidatas», calcula las respuestas del rival, valora riesgos y beneficios y solo entonces decide.</p>
+  <h2>Del tablero a la vida activa</h2>
+  <p>La planificación que se ejercita al calcular jugadas se parece a la de la vida diaria, la organización del entrenamiento personal y la resolución de problemas reales. Anticipar sirve para evitar trampas en el tablero, pero también para prevenir lesiones, prever contratiempos en una competencia y plantear metas de vida realistas.</p>
+  <div class="act">
+    <h3>Actividad 1. Tabla de riesgo y beneficio</h3>
+    <table class="blank">
+      <tr><th>Situación</th><th>¿Qué gano? (beneficio)</th><th>¿Qué puedo perder? (riesgo)</th><th>¿Lo hago? (sí/no y por qué)</th></tr>
+      <tr><td>Dejar de estudiar para un examen por ir a jugar un partido con amigos.</td><td></td><td></td><td></td></tr>
+      <tr><td>Hacer una jugada rápida en ajedrez para presionar al rival con el tiempo.</td><td></td><td></td><td></td></tr>
+    </table>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Preguntas de reflexión rápida (2 o 3 líneas cada una)</h3>
+    <ol>
+      <li><strong>Planificación:</strong> ¿por qué es importante tener un plan antes de empezar un juego o una tarea escolar?</li>
+      <li><strong>Consecuencias:</strong> ¿qué significa la frase «cada jugada en el ajedrez tiene una consecuencia irreversible»?</li>
+      <li><strong>Aplicación:</strong> escribe una regla del ajedrez (como proteger al rey o mover con cuidado las piezas) que te sirva para cuidar tu salud o tus estudios.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="post" id="anticipacion" data-p="4" data-t="La anticipación y la valoración de consecuencias" data-s="Beneficio, riesgo y consecuencia; anticipar en el deporte y en el ajedrez; de la decisión a la estrategia.">
+  <div class="meta">Periodo 4 · Tema 2</div>
+  <h1>La anticipación y la valoración de consecuencias en la toma de decisiones</h1>
+  <div class="ind"><strong>Indicador 4.1:</strong> Utiliza los principios estratégicos del ajedrez (planificación y valoración de alternativas) para analizar y resolver situaciones simuladas relacionadas con la toma de decisiones en deportes y proyectos de vida activa.</div>
+  <h2>Anticipar para decidir mejor</h2>
+  <p>Tomar una decisión no es simplemente actuar: hay que observar la situación, analizarla, identificar alternativas y elegir. <strong>Anticipar</strong> significa pensar antes en las posibles consecuencias de una acción. No es adivinar el futuro, sino usar la información disponible para imaginar posibilidades y prepararse para ellas.</p>
+  <p>Una persona impulsiva se concentra solo en lo que quiere hacer en ese momento. Quien piensa estratégicamente se pregunta: ¿qué quiero conseguir?, ¿qué alternativas tengo?, ¿qué puede ocurrir después?, ¿qué riesgos y beneficios hay?, ¿existe una opción mejor?</p>
+  <h2>Beneficio, riesgo y consecuencia</h2>
+  <ul>
+    <li><strong>Beneficio:</strong> resultado favorable que se puede obtener. Por ejemplo, pasar a un compañero libre para conservar el balón y crear una ocasión.</li>
+    <li><strong>Riesgo:</strong> posibilidad de que ocurra algo desfavorable. Por ejemplo, que el pase sea interceptado.</li>
+    <li><strong>Consecuencia:</strong> resultado que produce la acción; puede ser positiva o negativa, inmediata o a largo plazo.</li>
+  </ul>
+  <p>Una decisión no se analiza aislada: la misma acción puede ser buena en un contexto y mala en otro. Si un equipo gana por un gol y quedan segundos, conservar el balón es razonable; si va perdiendo, conservarlo sin avanzar no responde a su objetivo. <strong>La calidad de una decisión depende del objetivo y del contexto.</strong></p>
+  <h2>La anticipación en el deporte</h2>
+  <p>En el fútbol, el jugador no solo mira el balón: interpreta la posición de compañeros y rivales y reconoce los espacios. Al recibir puede pasar, conducir, cambiar de dirección, avanzar o tirar, y cada opción tiene beneficios y riesgos. Este proceso ocurre en una fracción de segundo, pero se puede entrenar con juegos que obliguen a detenerse, analizar y explicar las decisiones. Por eso la Educación Física desarrolla también capacidades cognitivas: percepción, anticipación, resolución de problemas y toma de decisiones.</p>
+  <h2>La anticipación en el ajedrez</h2>
+  <p>Una captura que parece favorable puede ser un error si después el rival captura una pieza más valiosa o crea una amenaza. Antes de mover conviene hacerse cuatro preguntas:</p>
+  <ol>
+    <li>¿Qué quiero conseguir con este movimiento?</li>
+    <li>¿Qué alternativas tengo?</li>
+    <li>¿Qué puede hacer mi adversario después?</li>
+    <li>¿Qué consecuencias puede producir mi decisión?</li>
+  </ol>
+  <h2>De la decisión a la estrategia</h2>
+  <p class="flow">Observar → analizar → identificar alternativas → anticipar consecuencias → valorar riesgos y beneficios → decidir → actuar → evaluar</p>
+  <p>Evaluar después de actuar es clave: un error se convierte en información para decidir mejor la próxima vez. Por ejemplo, quien pierde el balón una y otra vez por intentar superar a varios rivales puede decidir buscar primero a un compañero libre. Aprender a pensar sobre nuestras propias decisiones es la base de la <strong>metacognición</strong>.</p>
+  <div class="act">
+    <h3>Actividad 1. ¿Qué puede ocurrir?</h3>
+    <p>Escribe una posible consecuencia para cada situación:</p>
+    <ol type="a">
+      <li>Un estudiante decide no realizar ninguna actividad física durante toda la semana.</li>
+      <li>Un jugador intenta avanzar con el balón cuando tiene dos defensores delante.</li>
+      <li>Un jugador observa que un compañero está libre y decide pasarle el balón.</li>
+      <li>Un jugador de ajedrez mueve una pieza sin observar qué piezas del adversario pueden capturarla.</li>
+    </ol>
+    <p><strong>Reflexión:</strong> ¿qué tienen en común las cuatro situaciones?</p>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Beneficio, riesgo y consecuencia</h3>
+    <p>Durante un partido recibes el balón y puedes pasar a un compañero o intentar avanzar hacia la portería.</p>
+    <table class="blank">
+      <tr><th>Decisión</th><th>Posible beneficio</th><th>Posible riesgo</th></tr>
+      <tr><td>Pasar el balón</td><td></td><td></td></tr>
+      <tr><td>Avanzar hacia la portería</td><td></td><td></td></tr>
+    </table>
+    <p>¿Qué información necesitas observar antes de decidir? ¿Qué opción elegirías y por qué?</p>
+  </div>
+  <div class="act">
+    <h3>Actividad 3. Pienso como estratega</h3>
+    <p>Un jugador de ajedrez puede capturar una pieza del rival. La captura parece beneficiosa, pero antes decide analizar qué podría hacer el adversario.</p>
+    <ol>
+      <li>¿Qué decisión debe tomar el jugador?</li>
+      <li>¿Qué debe observar antes de mover?</li>
+      <li>¿Qué podría suceder si captura sin analizar la respuesta del rival?</li>
+      <li>¿Qué pregunta debería hacerse antes de mover?</li>
+      <li>Completa: «Antes de tomar una decisión debo preguntarme qué quiero conseguir, qué alternativas tengo, qué puede hacer el otro y ________».</li>
+    </ol>
+  </div>
+  <p><strong>Idea fundamental:</strong> una decisión estratégica no consiste solo en elegir una opción, sino en analizar las posibilidades y anticipar las consecuencias antes de actuar. La pregunta clave: <em>¿qué puede pasar después de mi decisión?</em></p>
+</article>
+
+<article class="post" id="planificacion-estrategica" data-p="4" data-t="Planificación estratégica y proyecto de vida activa" data-s="Objetivo, análisis, alternativas, acción y evaluación; metas SMART y recomendaciones de actividad física de la OMS.">
+  <div class="meta">Periodo 4 · Tema 3</div>
+  <h1>Planificación estratégica: establecer objetivos y elaborar un plan de acción</h1>
+  <div class="ind"><strong>Indicador 4.1:</strong> Utiliza los principios estratégicos del ajedrez (planificación y valoración de alternativas) para analizar y resolver situaciones simuladas relacionadas con la toma de decisiones en deportes y proyectos de vida activa.</div>
+  <p>La planificación estratégica es un proceso que organiza las decisiones y acciones necesarias para alcanzar un objetivo. En Educación Física significa evitar la improvisación: tener claro qué se quiere conseguir, con qué recursos se cuenta, qué dificultades pueden aparecer y qué hacer para superarlas.</p>
+  <h2>Los pasos de la planificación</h2>
+  <ol>
+    <li><strong>Definir un objetivo concreto.</strong> «Quiero mejorar» es un deseo; «quiero mejorar mi resistencia física durante las próximas seis semanas» es una meta que permite decidir acciones y comprobar resultados.</li>
+    <li><strong>Analizar la situación actual:</strong> fortalezas, aspectos a mejorar, recursos y dificultades (condición física actual, tiempo disponible, espacios, obstáculos).</li>
+    <li><strong>Buscar alternativas y elegir la estrategia.</strong> Quien piensa estratégicamente compara caminos y tiene un <strong>Plan A y un Plan B</strong>.</li>
+    <li><strong>Actuar</strong> poniendo en práctica las acciones elegidas.</li>
+    <li><strong>Evaluar</strong> los resultados y modificar el plan si no son los esperados. La planificación no termina al actuar: continúa con la evaluación.</li>
+  </ol>
+  <p class="flow">Meta → Análisis → Planificación → Acción → Evaluación</p>
+  <h2>En el deporte y en el ajedrez</h2>
+  <p>Un equipo de fútbol que quiere conservar la posesión analiza al adversario, identifica los espacios, decide cómo moverse y qué pases usar; si no funciona, cambia de plan. En ajedrez, antes de mover se piensa qué se quiere conseguir, qué alternativas hay y qué puede pasar después: cada jugada se valora por cómo contribuye al objetivo general.</p>
+  <h2>Metas SMART y proyecto de vida activa</h2>
+  <p>Una meta bien redactada es <strong>SMART</strong>: específica, medible, alcanzable, relevante y con un plazo definido. Por ejemplo: «trotar 30 minutos, tres veces por semana, durante dos meses».</p>
+  <p>Como referencia para un proyecto de vida activa, la Organización Mundial de la Salud recomienda que los adolescentes hasta los 17 años realicen en promedio al menos <strong>60 minutos diarios</strong> de actividad física moderada a vigorosa, y que los adultos realicen entre <strong>150 y 300 minutos semanales</strong> de actividad aeróbica moderada (o entre 75 y 150 de actividad vigorosa), además de fortalecimiento muscular dos o más días por semana.</p>
+  <p>Alcanzar una meta —en la condición física, los estudios, una profesión o la familia— requiere más que desearla: hay que establecer acciones concretas, mantenerlas en el tiempo y evaluar los avances.</p>
+  <div class="act">
+    <h3>Actividad 1. Mi propio plan de acción</h3>
+    <p>Piensa en algo que quieras mejorar en Educación Física (resistencia, velocidad, fuerza, flexibilidad o una habilidad deportiva) y completa:</p>
+    <ul>
+      <li>Mi objetivo: quiero mejorar ________.</li>
+      <li>¿Qué haré para conseguirlo? (tres acciones)</li>
+      <li>¿Qué dificultad podría encontrar? ¿Qué haré si aparece?</li>
+      <li>¿Cómo comprobaré si estoy mejorando?</li>
+      <li>Conclusión: una buena planificación me ayuda a ________.</li>
+    </ul>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Mi meta para el futuro</h3>
+    <p>Imagina cómo te gustaría verte dentro de cinco años y responde:</p>
+    <ol>
+      <li>Mi meta para el futuro es…</li>
+      <li>¿Por qué quiero alcanzarla?</li>
+      <li>¿Qué necesito hacer desde ahora para acercarme a ella? (tres acciones)</li>
+      <li>¿Qué dificultad podría encontrar en el camino?</li>
+      <li>¿Qué haré para superarla?</li>
+      <li>¿Cómo sabré que estoy avanzando?</li>
+    </ol>
+    <p><strong>Reflexión final:</strong> una meta sin un plan puede quedarse solo en un deseo. ¿Qué acción concreta comenzarás a realizar desde ahora?</p>
+  </div>
+  <p class="src">Fuente de las recomendaciones de actividad física: Organización Mundial de la Salud (2020), <em>Directrices sobre actividad física y comportamientos sedentarios</em>.</p>
+</article>
+
+<article class="post" id="etica-deportiva" data-p="4" data-t="Ética deportiva: juego limpio, dopaje y violencia" data-s="Valores del deporte, fair play, valores olímpicos, dopaje y su control internacional, violencia y cómo resolver un dilema ético.">
+  <div class="meta">Periodo 4 · Indicador 4.2</div>
+  <h1>Ética deportiva: juego limpio, dopaje y violencia</h1>
+  <div class="ind"><strong>Indicador 4.2:</strong> Argumenta y participa en debates guiados sobre dilemas éticos en el deporte (juego limpio, dopaje, violencia), formulando posturas críticas fundamentadas en evidencia.</div>
+  <h2>¿Qué es la ética deportiva?</h2>
+  <p>Es el conjunto de principios y valores que orientan el comportamiento en la práctica deportiva: <strong>respeto, honestidad, responsabilidad, justicia y solidaridad</strong>. El <strong>juego limpio</strong> (fair play) consiste en participar respetando las reglas, aceptar las decisiones arbitrales, reconocer los méritos del adversario y evitar cualquier ventaja injusta. No significa renunciar a ganar, sino ganar con entrenamiento, disciplina y habilidad. El movimiento olímpico resume estos ideales en tres valores: <strong>excelencia, respeto y amistad</strong>.</p>
+  <h2>El dopaje</h2>
+  <p>Es el uso de sustancias o métodos prohibidos para aumentar artificialmente el rendimiento. Es una trampa que rompe la igualdad de condiciones y pone en riesgo la salud del deportista. Para combatirlo se creó en 1999 la <strong>Agencia Mundial Antidopaje (AMA)</strong>, que publica el Código Mundial Antidopaje (vigente desde 2004) y actualiza cada año la lista de sustancias y métodos prohibidos. En 2005 la UNESCO aprobó la Convención Internacional contra el Dopaje en el Deporte.</p>
+  <h2>La violencia en el deporte</h2>
+  <p>Incluye agresiones físicas, insultos, amenazas y discriminación, dentro y fuera del terreno de juego, tanto de jugadores como de aficionados.</p>
+  <h2>Decidir bien, no solo ganar</h2>
+  <p>Las decisiones deportivas no se evalúan solo por el resultado, sino por cómo se toman: una estrategia puede ser eficaz, pero también debe respetar las reglas y los valores. Controlar la frustración, aceptar una derrota y respetar una decisión arbitral son muestras de madurez deportiva.</p>
+  <p class="flow">Para resolver un dilema ético: identificar el problema → analizar las alternativas → anticipar las consecuencias → justificar la decisión con argumentos y evidencia</p>
+  <div class="act">
+    <h3>Preguntas para el debate</h3>
+    <ol>
+      <li>¿Toda decisión que ayuda a ganar es una decisión correcta? Fundamenta tu postura con un ejemplo real o hipotético.</li>
+      <li>Como futuro profesional del área de salud, ¿qué argumentos darías a un deportista joven que piensa usar una sustancia prohibida?</li>
+      <li>Un estudiante se burla de un compañero que falla un pase. ¿Qué principio se está incumpliendo y cómo debería actuar el equipo?</li>
+      <li>¿Qué situaciones de violencia has observado en el deporte escolar, comunitario o profesional? Propón dos acciones concretas para prevenirlas desde tu centro educativo.</li>
+    </ol>
+  </div>
+  <p class="src">Fuentes: Agencia Mundial Antidopaje, <em>Código Mundial Antidopaje</em>; UNESCO (2005), <em>Convención Internacional contra el Dopaje en el Deporte</em>; Comité Olímpico Internacional, valores olímpicos.</p>
+</article>
+
+<article class="post" id="integradora-p4" data-p="4" data-t="Actividades integradoras del periodo 4" data-s="Cuestionario integrador sobre ajedrez, estrategia y ética, y la actividad de refuerzo con preguntas, mapa conceptual y reflexión.">
+  <div class="meta">Periodo 4 · Integradora y refuerzo</div>
+  <h1>Actividades integradoras del periodo 4</h1>
+  <p class="lead">Dos actividades para cerrar el periodo, basadas en los temas de <a href="#historia-ajedrez">historia del ajedrez</a>, <a href="#principios-ajedrez">principios estratégicos</a>, <a href="#anticipacion">anticipación</a>, <a href="#planificacion-estrategica">planificación estratégica</a> y <a href="#etica-deportiva">ética deportiva</a>.</p>
+  <h2>A. Cuestionario integrador: historia y estrategia del ajedrez</h2>
+  <p>Se responde una sola vez, con base en los documentos de las clases anteriores. Algunas de sus preguntas:</p>
+  <div class="act">
+    <h3>Preguntas</h3>
+    <ol>
+      <li>¿Qué explicación sobre el origen del ajedrez es la más aceptada?</li>
+      <li>¿A qué se refería el término sánscrito «chaturanga»?</li>
+      <li>¿Qué secuencia refleja mejor la evolución geográfica y lingüística del juego?</li>
+      <li>¿Qué demuestra la existencia de tratados y jugadores como al-Adli y al-Suli?</li>
+      <li>¿Qué cambio fue decisivo para el nacimiento del ajedrez moderno?</li>
+      <li>¿Qué idea se asocia con Philidor?</li>
+      <li>¿Qué ocurrió en 1886, en 1924 y en 1997?</li>
+      <li>¿Por qué tuvo tanta repercusión el encuentro Fischer–Spassky de 1972?</li>
+      <li>¿Qué significa anticipar en la toma de decisiones?</li>
+      <li>¿Cómo se diferencia un riesgo de una consecuencia?</li>
+      <li>¿Por qué una captura aparentemente favorable puede ser un error?</li>
+      <li>¿Qué distingue un objetivo concreto de un deseo general?</li>
+      <li>¿Por qué es útil contar con un Plan A y un Plan B?</li>
+      <li>¿Cuándo termina realmente un proceso de planificación estratégica?</li>
+      <li>¿Qué significa el juego limpio?</li>
+      <li>¿Por qué ganar no justifica cualquier comportamiento deportivo?</li>
+      <li>¿Qué pasos son adecuados para resolver un dilema ético deportivo?</li>
+    </ol>
+  </div>
+  <h2>B. Actividad de refuerzo y recuperación del periodo 4</h2>
+  <p>Escrita a mano, en hojas de papel bond y con carátula. No se aceptan trabajos impresos ni hechos en computadora.</p>
+  <div class="act">
+    <h3>Actividad 1. Preguntas de respuesta corta (una o dos líneas)</h3>
+    <ol>
+      <li>¿En qué país surgió el chaturanga y aproximadamente en qué siglo?</li>
+      <li>¿Quién fue el primer campeón mundial oficial de ajedrez y en qué año obtuvo el título?</li>
+      <li>¿Qué es la FIDE y en qué año se fundó?</li>
+      <li>¿Cuál es la única pieza que puede saltar sobre las demás y cómo se mueve?</li>
+      <li>Menciona los tres principios básicos de la apertura.</li>
+      <li>¿Cuál es la diferencia entre estrategia y táctica?</li>
+      <li>Explica la diferencia entre beneficio, riesgo y consecuencia.</li>
+      <li>Escribe en orden los cinco pasos de la planificación estratégica.</li>
+      <li>¿Qué significa que una meta sea SMART?</li>
+      <li>¿Qué es el dopaje y qué organismo internacional lo combate?</li>
+    </ol>
+  </div>
+  <div class="act">
+    <h3>Actividad 2. Mapa conceptual</h3>
+    <p>Tema central: «Pensamiento estratégico, toma de decisiones y ética deportiva», con cuatro ramas:</p>
+    <ol>
+      <li>El ajedrez (historia, piezas y movimientos, principios estratégicos).</li>
+      <li>Toma de decisiones (anticipación, beneficio, riesgo, consecuencia, preguntas antes de actuar).</li>
+      <li>Planificación estratégica y proyecto de vida activa (cinco pasos, metas SMART, recomendaciones de la OMS).</li>
+      <li>Ética deportiva (valores, juego limpio, dopaje, violencia).</li>
+    </ol>
+    <p>El tema central va en un recuadro; cada rama tiene al menos tres conceptos unidos con líneas o flechas y palabras de enlace («se divide en», «sirve para», «incluye», «se opone a»); usar regla, letra clara y colores por rama.</p>
+  </div>
+  <div class="act">
+    <h3>Actividad 3. Preguntas de reflexión (mínimo cinco líneas cada una)</h3>
+    <ol>
+      <li>Recuerda una decisión importante que hayas tomado por impulso. ¿Qué habría cambiado si hubieras aplicado las cuatro preguntas que se hacen antes de actuar?</li>
+      <li>Redacta una meta SMART para tu proyecto de vida activa al terminar el bachillerato y explica tu Plan A y tu Plan B.</li>
+      <li>Como futuro profesional del área de salud, ¿qué argumentos darías a un deportista joven que piensa usar una sustancia prohibida?</li>
+      <li>¿Toda decisión que ayuda a ganar es una decisión correcta? Fundamenta tu postura con un ejemplo.</li>
+      <li>¿Qué situaciones de violencia has observado en el deporte? Propón dos acciones concretas para prevenirlas desde tu centro educativo.</li>
+    </ol>
+  </div>
+  <table>
+    <tr><th>Criterio de evaluación</th><th>Puntos</th></tr>
+    <tr><td>Comprende el contenido: demuestra que entendió la lectura</td><td>2</td></tr>
+    <tr><td>Piensa y analiza: da respuestas propias, no solo copia</td><td>2</td></tr>
+    <tr><td>Explica sus respuestas: justifica por qué piensa así</td><td>2</td></tr>
+    <tr><td>Relaciona con el deporte y con su vida</td><td>2</td></tr>
+    <tr><td>Presenta un trabajo ordenado, completo y con buena redacción</td><td>2</td></tr>
+  </table>
+</article>
+
+  </div>
+</main>
+<footer>Material de Educación Física · Lic. Raúl Benítez · 2026 · Puede usarse y adaptarse libremente con fines educativos.</footer>
 
 <script>
-const C = "NzkzMjQyNzIzMzgx";
-const cls = (type,id) => `https://classroom.google.com/c/${C}/${type==="Tarea"?"a":"m"}/${btoa(id)}/details`;
-const PER = [
-  {n:1, c:"var(--p1)", rango:"13 feb – 16 abr", nombre:"Condición física"},
-  {n:2, c:"var(--p2)", rango:"23 abr – 25 jun", nombre:"Deportes de invasión y fútbol"},
-  {n:3, c:"var(--p3)", rango:"2 jul – 3 sep", nombre:"Deportes de red/muro, voleibol y lesiones"},
-  {n:4, c:"var(--p4)", rango:"10 sep – 18 nov", nombre:"Ajedrez y pensamiento estratégico"},
-];
-const D = [
-  // ---- Periodo 1
-  {p:1,id:"793827877616",t:"Bienvenida",tipo:"Material",f:"13 feb",d:"Saludo de inicio de año.",
-   a:[["Bienvenidos a Educación Física 2026.pdf","https://drive.google.com/file/d/1opecep-B9ISZwr0wGhZ2IbgOaqbU2fHh/view"]]},
-  {p:1,id:"850090783320",t:"La condición física",tipo:"Material",f:"5 mar",tag:"Indicador 1.1 · semana 5 (2–6 mar)",d:"Indicador 1.1 semana 5 del 02 al 06 de marzo.",
-   a:[["Imagen del tema (5 mar 2026).jpg","https://drive.google.com/file/d/1hgQXQ3Kvhw4DBGPUXm79jAMYMWDvEtDQ/view"]]},
-  {p:1,id:"797309833913",t:"Actividad de refuerzo y recuperación — Periodo 1",tipo:"Material",f:"16 abr (editado 10 jun)",d:"Se desarrolla en el cuaderno de Educación Física, se presenta en la clase y se entrega el mismo día.",
-   a:[["Act. de recuperac. per 1 bachillerato 2026.docx","https://drive.google.com/file/d/1Ax98lN8PnD_KzZgbhDqg_yZwxptYlVpu/view"]]},
-  // ---- Periodo 2
-  {p:2,id:"797445068263",t:"Material para Actividad 1 — Periodo 2",tipo:"Material",f:"23 abr",tag:"Semana 11",d:"Leer y resolver en el cuaderno las actividades al final del documento.",
-   a:[["3° año semana 11.pdf","https://drive.google.com/file/d/1qkwR_NXCtC5r_-YiWQHl9BK730fZ1el_/view"]]},
-  {p:2,id:"797445423425",t:"Act 1: Estrategia y táctica en deportes de invasión",tipo:"Tarea",f:"23 abr (editado 25 jun)",pts:18,d:"Cuestionario en Google Forms.",
-   a:[["Formulario: Estrategia y Táctica en Deportes de Invasión","https://docs.google.com/forms/d/1uZ4O386ze_h8vZfeKKjJAc-sJ50PSqVzVYlKqTeizRA/edit"]]},
-  {p:2,id:"797597554843",t:"Actividad cotidiana: principios tácticos del fútbol",tipo:"Material",f:"30 abr",d:"Realizar un resumen del contenido y elaborar un mapa conceptual en el cuaderno.",
-   a:[["Principios tácticos del fútbol (Israel Costa).pdf","https://drive.google.com/file/d/1W6Ia--SV2ra79vsGC3yhnI3Jy2cYM4Ho/view"]]},
-  {p:2,id:"797597741258",t:"Actividad integradora: Principios tácticos fundamentales en el fútbol",tipo:"Tarea",f:"7 may (editado 25 jun)",pts:16,d:"Responder el cuestionario.",
-   a:[["Formulario: Principios Tácticos Fundamentales en el Fútbol","https://docs.google.com/forms/d/15cQpAhNxwDeXRpOlve3i_9bcz0ruxfvNZzz1DWmDbbk/edit"]]},
-  {p:2,id:"864609514870",t:"2.1 Sistemas de juego en el fútbol",tipo:"Tarea",f:"14 may (editado 25 jun)",pts:20,d:"Analizar y responder el cuestionario compartido.",
-   a:[["Formulario: Sistemas de Juego en el Fútbol","https://docs.google.com/forms/d/1oumPq7twsj8tbGHK2gsS0EITWJshm-D-_j48wU3sFcY/edit"]]},
-  {p:2,id:"866337361781",t:"Actividad para hoy",tipo:"Material",f:"28 may",d:"Leer y contestar en el cuaderno el material.",
-   a:[["actividad para este día 280526.pdf","https://drive.google.com/file/d/1omp-Ciq2GLhoYLYn5P8mDMBJlhFfAx6V/view"]]},
-  {p:2,id:"798014893347",t:"Act. integradora 2: Sistemas de juego en el fútbol",tipo:"Material",f:"28 may (editado 25 jun)",d:"Puede trabajarse en el cuaderno o impreso.\nFecha de presentación: jueves 4 de junio de 2026.",
-   a:[["Sistemas de Juego en el Fútbol (1).pdf","https://drive.google.com/file/d/1mkIUelqo8BI-fPb52-a-_U3-OFwWB9KV/view"]]},
-  {p:2,id:"867039646395",t:"Actividad de refuerzo y recuperación — Periodo 2",tipo:"Tarea",f:"25 jun",pts:100,d:"Trabajar en el cuaderno o en hojas de papel bond.\nRealizar un mapa conceptual siguiendo las indicaciones del archivo adjunto.\nEntrega: el día de la clase de Educación Física.",
-   a:[["Act. de recuperac. per2 tercero bachillerato.docx","https://drive.google.com/file/d/1Xq-vE-JeNnucb7jumCs7F87nNJLEzyPI/view"]]},
-  // ---- Periodo 3
-  {p:3,id:"868969615590",t:"Deportes de red/muro y optimización del rendimiento",tipo:"Material",f:"2 jul",d:"Leer y analizar la información de la imagen.\nOrganizarse en parejas para discutir y responder el cuestionario.\nCopiar el cuestionario en el cuaderno de manera individual.",
-   a:[["Fundamentos de Voley tercer año.png","https://drive.google.com/file/d/1ilZ5m19T-0NxbOiudBHiRG_NDLe5O73D/view"]]},
-  {p:3,id:"870458514927",t:"La rotación en el voleibol",tipo:"Material",f:"9 jul",d:"Trabajar en el cuaderno.",
-   a:[["Voleibol LA ROTACION.pdf","https://drive.google.com/file/d/1BEXgldpD1Ufmb8ovI3F9MsC-vOglc_4j/view"]]},
-  {p:3,id:"798460029312",t:"Reglas del voleibol",tipo:"Material",f:"16 jul",d:"Analizar el video y contestar en el cuaderno:\n1. ¿En qué consisten cada una de las 8 clases de faltas?\n2. ¿En qué casos se aplica un castigo, una expulsión y una descalificación?",
-   a:[["Reglas del voleibol.mp4 (video)","https://drive.google.com/file/d/1DXpXOzHm1fFlOmWhA32eOTSkWjRfS4N1/view"]]},
-  {p:3,id:"798506969829",t:"Indicador 3.3: Contusiones",tipo:"Material",f:"23 jul",tag:"Indicador 3.3",d:"Leer el documento y realizar las actividades en el cuaderno.",
-   a:[["indicador 3.3 Contusiones.docx","https://drive.google.com/file/d/1XNWGBmgpQD5HbQ-XGZi1Ygl8MXfjoQSF/view"]]},
-  {p:3,id:"874623028684",t:"Indicador 3.3: Esguinces y sobrecarga muscular",tipo:"Material",f:"14 ago",tag:"Indicador 3.3",d:"Desarrollar en el cuaderno las actividades propuestas.",
-   a:[["Indicador 3.3 Esguinces y sobrecarga muscular.docx","https://drive.google.com/file/d/1jAjjOoEKd4SNzP2tVs1zC34dqGGWf5fy/view"]]},
-  {p:3,id:"875227629827",t:"Actividad integradora: Biomecánica del deporte y condición física en deportes de red y muro",tipo:"Tarea",f:"20 ago",pts:24,d:"Analizar la lectura y contestar el formulario de Google.",
-   a:[["Formulario: La Biomecánica del Deporte y la Condición Física en Deportes de Red y Muro","https://docs.google.com/forms/d/1PdizkoRQMKxIxi2R0BjXBUVlG48t5VZK_A97doHY8o0/edit"]]},
-  {p:3,id:"877425254445",t:"Actividad de refuerzo y recuperación — Periodo 3",tipo:"Tarea",f:"3 sep",pts:20,d:"Leer el material del formulario y después contestarlo.\nSolo puede contestarse una vez y se cierra el mismo día.",
-   a:[["Formulario: Actividad de refuerzo y recuperación PERIODO 3","https://docs.google.com/forms/d/1trCnOIwuhoCvu56HhtQkbUbbz9xVKsF7DDcKj3myzis/edit"]]},
-  // ---- Periodo 4
-  {p:4,id:"884352964361",t:"Tema 1 (Periodo 4)",tipo:"Material",f:"10 sep (editado 20 oct)",d:"Leer y desarrollar en el cuaderno las actividades del archivo adjunto.",
-   a:[["Periodo 4.docx","https://drive.google.com/file/d/13bDXAGvR1z5OVkHwJ5U88zfva5Kughyp/view"]]},
-  {p:4,id:"869674871904",t:"Historia del ajedrez",tipo:"Tarea",f:"17 sep (editado 20 oct)",pts:100,d:"Leer y realizar la actividad en el cuaderno.",
-   a:[["HISTORIA DEL AJEDREZ.pdf","https://drive.google.com/file/d/1UicmvI6abCQ7FRhz9vv2lRH-PFFjsHRQ/view"]]},
-  {p:4,id:"887160915355",t:"Tema 2: La anticipación en la toma de decisiones estratégicas",tipo:"Material",f:"24 sep (editado 20 oct)",d:"Leer y analizar el documento y después desarrollar las actividades en el cuaderno.",
-   a:[["SEMANA 2 periodo 4.docx","https://drive.google.com/file/d/1Mmn1mB6sAkvudCzQTUB_QbJKhn6t-YKv/view"]]},
-  {p:4,id:"890001422758",t:"La planeación estratégica",tipo:"Material",f:"8 oct (editado 20 oct)",d:"Realizar en el cuaderno las actividades al final del documento.",
-   a:[["Semana 3.docx","https://drive.google.com/file/d/1YFlb_KsWXp773hAmilY0-wgVbPaiUHdT/view"]]},
-  {p:4,id:"892444059788",t:"Act. integradora: Historia y estrategia del ajedrez",tipo:"Tarea",f:"15 oct (editado 20 oct)",pts:30,d:"Contestar el cuestionario con base en los documentos de las clases anteriores.\nSolo se puede contestar una vez.",
-   a:[["Formulario: Historia y Estrategia del Ajedrez – Cuestionario y Análisis","https://docs.google.com/forms/d/1iS8Hfl_8DB97_DWE2levUD8llxGdq2nptadoajfQ6ww/edit"]]},
-  {p:4,id:"883552636866",t:"Actividad de refuerzo y recuperación extraordinaria — Periodo 4",tipo:"Material",f:"18 nov",d:"Leer el documento y desarrollar las tres actividades al final de la lectura.\nA mano, en hojas de papel bond y con carátula.\nEntrega: lunes 23 de noviembre de 2026.",
-   a:[["Actividad de refuerzo y recuperación extraordinaria P4 – 3° Salud A (Google Docs)","https://docs.google.com/document/d/1ICvR5WmN5m7LBSfHK911cWZLHtPGhJEUhZT4Pk9Vcfg/edit"]]},
-];
+const PER = {
+  1:{c:"var(--p1)", t:"Periodo 1 · Condición física y autoevaluación", d:"Entrenamiento, capacidades físicas y pruebas de evaluación."},
+  2:{c:"var(--p2)", t:"Periodo 2 · Estrategia en deportes de invasión", d:"Táctica, principios tácticos y sistemas de juego en el fútbol."},
+  3:{c:"var(--p3)", t:"Periodo 3 · Deportes de red/muro y prevención de lesiones", d:"Voleibol, biomecánica, contusiones, esguinces y sobrecargas."},
+  4:{c:"var(--p4)", t:"Periodo 4 · Ética, metacognición y proyecto de vida activa", d:"Ajedrez, toma de decisiones, planificación estratégica y ética deportiva."}
+};
+const posts=[...document.querySelectorAll("article.post")];
+posts.forEach(a=>a.style.setProperty("--c",PER[a.dataset.p].c));
+let filtro=0;
+const norm=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
 
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let filtro = "all";
-
-function stats(){
-  document.getElementById("stats").innerHTML = PER.map(P=>{
-    const it = D.filter(x=>x.p===P.n);
-    const m = it.filter(x=>x.tipo==="Material").length, t = it.length-m;
-    return `<button class="stat" style="--c:${P.c}" data-go="periodo-${P.n}"><b>Periodo ${P.n}</b><span>${it.length} publicaciones · ${m} mat. / ${t} tareas</span></button>`;
-  }).join("");
-  document.querySelectorAll(".stat").forEach(b=>b.onclick=()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:"smooth"}));
-}
-
-function render(){
-  const q = document.getElementById("q").value.trim().toLowerCase();
-  const ok = x => (filtro==="all"||x.tipo===filtro) &&
-    (!q || [x.t,x.d,x.tag||"",x.f,...x.a.map(a=>a[0])].join(" ").toLowerCase().includes(q));
-  let html="", total=0;
-  for(const P of PER){
-    const it = D.filter(x=>x.p===P.n && ok(x));
-    total += it.length;
-    if(!it.length && (q||filtro!=="all")) continue;
-    html += `<section class="periodo" id="periodo-${P.n}" style="--c:${P.c}">
-      <div class="ph"><h2>Periodo ${P.n} · ${esc(P.nombre)}</h2><small>${P.rango}</small></div>
-      ${it.map((x,i)=>`<article class="item">
-        <div class="top"><h3>${i+1}. ${esc(x.t)}</h3>
-          <div class="meta"><span class="badge ${x.tipo==="Tarea"?"b-tar":"b-mat"}">${x.tipo}</span>${x.pts?`<span class="badge b-pts">${x.pts} pts</span>`:""}<span class="date">${esc(x.f)}</span></div></div>
-        ${x.tag?`<span class="tag">${esc(x.tag)}</span>`:""}
-        <p class="desc">${esc(x.d)}</p>
-        <div class="links">${x.a.map(a=>`<a href="${a[1]}" target="_blank" rel="noopener">📎 ${esc(a[0])}</a>`).join("")}
-          <a class="cls" href="${cls(x.tipo,x.id)}" target="_blank" rel="noopener">Abrir en Classroom ↗</a></div>
-      </article>`).join("")}
-    </section>`;
+function home(){
+  const q=norm(document.getElementById("q").value.trim());
+  let html="";
+  for(const p of [1,2,3,4]){
+    if(filtro && filtro!==p) continue;
+    const list=posts.filter(a=>a.dataset.p==p && (!q || norm(a.dataset.t+" "+a.textContent).includes(q)));
+    if(!list.length) continue;
+    html+=`<section class="period" style="--c:${PER[p].c}"><div class="period-head"><h2>${PER[p].t}</h2><p>${PER[p].d}</p></div><div class="grid">`+
+      list.map((a,i)=>`<a class="card" href="#${a.id}" style="--c:${PER[p].c}"><span class="n">Tema ${posts.filter(x=>x.dataset.p==p).indexOf(a)+1}</span><h3>${a.dataset.t}</h3><p>${a.dataset.s}</p></a>`).join("")+`</div></section>`;
   }
-  document.getElementById("main").innerHTML = html || `<p class="empty">No hay publicaciones que coincidan con la búsqueda.</p>`;
+  document.getElementById("home").innerHTML=html||`<p class="empty">No se encontraron temas con esa búsqueda.</p>`;
 }
 
-document.getElementById("q").addEventListener("input", render);
-document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{
-  filtro=b.dataset.f; document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", c===b)); render();
-});
-stats(); render();
+function route(){
+  const id=location.hash.slice(1);
+  const post=posts.find(a=>a.id===id);
+  posts.forEach(a=>a.classList.remove("on"));
+  document.querySelectorAll(".back,.pn").forEach(e=>e.remove());
+  if(post){
+    document.getElementById("home").style.display="none";
+    document.getElementById("tools").style.display="none";
+    post.classList.add("on");
+    const i=posts.indexOf(post), prev=posts[i-1], next=posts[i+1];
+    post.insertAdjacentHTML("beforebegin",`<a class="back" href="#">← Todos los temas</a>`);
+    post.insertAdjacentHTML("beforeend",`<nav class="pn"><span>${prev?`<a href="#${prev.id}">← ${prev.dataset.t}</a>`:""}</span><span>${next?`<a href="#${next.id}">${next.dataset.t} →</a>`:""}</span></nav>`);
+    requestAnimationFrame(()=>window.scrollTo(0,0));
+  }else{
+    document.getElementById("home").style.display="";
+    document.getElementById("tools").style.display="";
+    home();
+  }
+}
+document.getElementById("q").addEventListener("input",home);
+document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{filtro=+b.dataset.p;document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));home();});
+window.addEventListener("hashchange",route);
+route();
 </script>
 </body>
 </html>
