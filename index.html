@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temas 2026 · 3° Salud "A" · Educación Física</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#5d6878; --line:#e3e7ed;
+    --p1:#2f6fd6; --p2:#1f9d6b; --p3:#d9822b; --p4:#8a4fd1;
+    --mat:#e8f0fe; --mat-ink:#1a56b8; --tar:#fdf1e3; --tar-ink:#a35a0c;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11151b; --card:#1a2029; --ink:#e6eaf0; --muted:#9aa5b4; --line:#2a323e;
+      --mat:#1d2b44; --mat-ink:#8db4ff; --tar:#3a2a17; --tar-ink:#f2b46c; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+  header{background:var(--card);border-bottom:1px solid var(--line);padding:28px 20px 20px}
+  .wrap{max-width:980px;margin:0 auto}
+  h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:0}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+  .stat{border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--c);background:var(--card);cursor:pointer;text-align:left;font:inherit;color:inherit}
+  .stat:hover{box-shadow:0 2px 10px rgba(0,0,0,.06)}
+  .stat b{display:block;font-size:.95rem}
+  .stat span{color:var(--muted);font-size:.85rem}
+  .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+  .tools input{flex:1;min-width:220px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink)}
+  .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--card);border-color:var(--ink)}
+  main{padding:10px 20px 60px}
+  section.periodo{margin-top:30px;break-inside:avoid-page}
+  .ph{display:flex;align-items:baseline;gap:12px;border-left:6px solid var(--c);padding-left:12px;margin-bottom:12px}
+  .ph h2{margin:0;font-size:1.25rem}
+  .ph small{color:var(--muted)}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px;break-inside:avoid;page-break-inside:avoid}
+  .top{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .item h3{margin:0;font-size:1.02rem;font-weight:600}
+  .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:.8rem}
+  .badge{border-radius:6px;padding:2px 8px;font-weight:600}
+  .b-mat{background:var(--mat);color:var(--mat-ink)}
+  .b-tar{background:var(--tar);color:var(--tar-ink)}
+  .b-pts{border:1px solid var(--line);color:var(--muted)}
+  .date{color:var(--muted)}
+  .tag{display:inline-block;font-size:.75rem;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:1px 7px;margin-top:6px}
+  .desc{margin:8px 0 0;white-space:pre-line;color:var(--ink);font-size:.93rem}
+  .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .links a{font-size:.85rem;text-decoration:none;color:var(--mat-ink);border:1px solid var(--line);border-radius:8px;padding:5px 10px;background:var(--bg)}
+  .links a:hover{border-color:var(--mat-ink)}
+  .links a.cls{color:var(--muted)}
+  .empty{color:var(--muted);padding:20px;text-align:center}
+  footer{color:var(--muted);font-size:.8rem;text-align:center;padding:0 20px 30px}
+  @media (max-width:700px){ .stats{grid-template-columns:repeat(2,1fr)} }
+  @media print{ header .tools{display:none} body{background:#fff} .item{border-color:#ccc} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Temas publicados 2026 — 3° Salud "A"</h1>
+    <p class="sub">Educación Física · Google Classroom · Prof. Raúl de Jesús Benítez Salinas</p>
+    <div class="stats" id="stats"></div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Buscar tema, indicador o archivo…" aria-label="Buscar">
+      <button class="chip" data-f="all" aria-pressed="true">Todo</button>
+      <button class="chip" data-f="Material">Materiales</button>
+      <button class="chip" data-f="Tarea">Tareas</button>
+    </div>
+  </div>
+</header>
+<main class="wrap" id="main"></main>
+<footer>Datos tomados de la sección "Trabajo en clase" de Classroom el 19 de noviembre de 2026 · 24 publicaciones.</footer>
+
+<script>
+const C = "NzkzMjQyNzIzMzgx";
+const cls = (type,id) => `https://classroom.google.com/c/${C}/${type==="Tarea"?"a":"m"}/${btoa(id)}/details`;
+const PER = [
+  {n:1, c:"var(--p1)", rango:"13 feb – 16 abr", nombre:"Condición física"},
+  {n:2, c:"var(--p2)", rango:"23 abr – 25 jun", nombre:"Deportes de invasión y fútbol"},
+  {n:3, c:"var(--p3)", rango:"2 jul – 3 sep", nombre:"Deportes de red/muro, voleibol y lesiones"},
+  {n:4, c:"var(--p4)", rango:"10 sep – 18 nov", nombre:"Ajedrez y pensamiento estratégico"},
+];
+const D = [
+  // ---- Periodo 1
+  {p:1,id:"793827877616",t:"Bienvenida",tipo:"Material",f:"13 feb",d:"Saludo de inicio de año.",
+   a:[["Bienvenidos a Educación Física 2026.pdf","https://drive.google.com/file/d/1opecep-B9ISZwr0wGhZ2IbgOaqbU2fHh/view"]]},
+  {p:1,id:"850090783320",t:"La condición física",tipo:"Material",f:"5 mar",tag:"Indicador 1.1 · semana 5 (2–6 mar)",d:"Indicador 1.1 semana 5 del 02 al 06 de marzo.",
+   a:[["Imagen del tema (5 mar 2026).jpg","https://drive.google.com/file/d/1hgQXQ3Kvhw4DBGPUXm79jAMYMWDvEtDQ/view"]]},
+  {p:1,id:"797309833913",t:"Actividad de refuerzo y recuperación — Periodo 1",tipo:"Material",f:"16 abr (editado 10 jun)",d:"Se desarrolla en el cuaderno de Educación Física, se presenta en la clase y se entrega el mismo día.",
+   a:[["Act. de recuperac. per 1 bachillerato 2026.docx","https://drive.google.com/file/d/1Ax98lN8PnD_KzZgbhDqg_yZwxptYlVpu/view"]]},
+  // ---- Periodo 2
+  {p:2,id:"797445068263",t:"Material para Actividad 1 — Periodo 2",tipo:"Material",f:"23 abr",tag:"Semana 11",d:"Leer y resolver en el cuaderno las actividades al final del documento.",
+   a:[["3° año semana 11.pdf","https://drive.google.com/file/d/1qkwR_NXCtC5r_-YiWQHl9BK730fZ1el_/view"]]},
+  {p:2,id:"797445423425",t:"Act 1: Estrategia y táctica en deportes de invasión",tipo:"Tarea",f:"23 abr (editado 25 jun)",pts:18,d:"Cuestionario en Google Forms.",
+   a:[["Formulario: Estrategia y Táctica en Deportes de Invasión","https://docs.google.com/forms/d/1uZ4O386ze_h8vZfeKKjJAc-sJ50PSqVzVYlKqTeizRA/edit"]]},
+  {p:2,id:"797597554843",t:"Actividad cotidiana: principios tácticos del fútbol",tipo:"Material",f:"30 abr",d:"Realizar un resumen del contenido y elaborar un mapa conceptual en el cuaderno.",
+   a:[["Principios tácticos del fútbol (Israel Costa).pdf","https://drive.google.com/file/d/1W6Ia--SV2ra79vsGC3yhnI3Jy2cYM4Ho/view"]]},
+  {p:2,id:"797597741258",t:"Actividad integradora: Principios tácticos fundamentales en el fútbol",tipo:"Tarea",f:"7 may (editado 25 jun)",pts:16,d:"Responder el cuestionario.",
+   a:[["Formulario: Principios Tácticos Fundamentales en el Fútbol","https://docs.google.com/forms/d/15cQpAhNxwDeXRpOlve3i_9bcz0ruxfvNZzz1DWmDbbk/edit"]]},
+  {p:2,id:"864609514870",t:"2.1 Sistemas de juego en el fútbol",tipo:"Tarea",f:"14 may (editado 25 jun)",pts:20,d:"Analizar y responder el cuestionario compartido.",
+   a:[["Formulario: Sistemas de Juego en el Fútbol","https://docs.google.com/forms/d/1oumPq7twsj8tbGHK2gsS0EITWJshm-D-_j48wU3sFcY/edit"]]},
+  {p:2,id:"866337361781",t:"Actividad para hoy",tipo:"Material",f:"28 may",d:"Leer y contestar en el cuaderno el material.",
+   a:[["actividad para este día 280526.pdf","https://drive.google.com/file/d/1omp-Ciq2GLhoYLYn5P8mDMBJlhFfAx6V/view"]]},
+  {p:2,id:"798014893347",t:"Act. integradora 2: Sistemas de juego en el fútbol",tipo:"Material",f:"28 may (editado 25 jun)",d:"Puede trabajarse en el cuaderno o impreso.\nFecha de presentación: jueves 4 de junio de 2026.",
+   a:[["Sistemas de Juego en el Fútbol (1).pdf","https://drive.google.com/file/d/1mkIUelqo8BI-fPb52-a-_U3-OFwWB9KV/view"]]},
+  {p:2,id:"867039646395",t:"Actividad de refuerzo y recuperación — Periodo 2",tipo:"Tarea",f:"25 jun",pts:100,d:"Trabajar en el cuaderno o en hojas de papel bond.\nRealizar un mapa conceptual siguiendo las indicaciones del archivo adjunto.\nEntrega: el día de la clase de Educación Física.",
+   a:[["Act. de recuperac. per2 tercero bachillerato.docx","https://drive.google.com/file/d/1Xq-vE-JeNnucb7jumCs7F87nNJLEzyPI/view"]]},
+  // ---- Periodo 3
+  {p:3,id:"868969615590",t:"Deportes de red/muro y optimización del rendimiento",tipo:"Material",f:"2 jul",d:"Leer y analizar la información de la imagen.\nOrganizarse en parejas para discutir y responder el cuestionario.\nCopiar el cuestionario en el cuaderno de manera individual.",
+   a:[["Fundamentos de Voley tercer año.png","https://drive.google.com/file/d/1ilZ5m19T-0NxbOiudBHiRG_NDLe5O73D/view"]]},
+  {p:3,id:"870458514927",t:"La rotación en el voleibol",tipo:"Material",f:"9 jul",d:"Trabajar en el cuaderno.",
+   a:[["Voleibol LA ROTACION.pdf","https://drive.google.com/file/d/1BEXgldpD1Ufmb8ovI3F9MsC-vOglc_4j/view"]]},
+  {p:3,id:"798460029312",t:"Reglas del voleibol",tipo:"Material",f:"16 jul",d:"Analizar el video y contestar en el cuaderno:\n1. ¿En qué consisten cada una de las 8 clases de faltas?\n2. ¿En qué casos se aplica un castigo, una expulsión y una descalificación?",
+   a:[["Reglas del voleibol.mp4 (video)","https://drive.google.com/file/d/1DXpXOzHm1fFlOmWhA32eOTSkWjRfS4N1/view"]]},
+  {p:3,id:"798506969829",t:"Indicador 3.3: Contusiones",tipo:"Material",f:"23 jul",tag:"Indicador 3.3",d:"Leer el documento y realizar las actividades en el cuaderno.",
+   a:[["indicador 3.3 Contusiones.docx","https://drive.google.com/file/d/1XNWGBmgpQD5HbQ-XGZi1Ygl8MXfjoQSF/view"]]},
+  {p:3,id:"874623028684",t:"Indicador 3.3: Esguinces y sobrecarga muscular",tipo:"Material",f:"14 ago",tag:"Indicador 3.3",d:"Desarrollar en el cuaderno las actividades propuestas.",
+   a:[["Indicador 3.3 Esguinces y sobrecarga muscular.docx","https://drive.google.com/file/d/1jAjjOoEKd4SNzP2tVs1zC34dqGGWf5fy/view"]]},
+  {p:3,id:"875227629827",t:"Actividad integradora: Biomecánica del deporte y condición física en deportes de red y muro",tipo:"Tarea",f:"20 ago",pts:24,d:"Analizar la lectura y contestar el formulario de Google.",
+   a:[["Formulario: La Biomecánica del Deporte y la Condición Física en Deportes de Red y Muro","https://docs.google.com/forms/d/1PdizkoRQMKxIxi2R0BjXBUVlG48t5VZK_A97doHY8o0/edit"]]},
+  {p:3,id:"877425254445",t:"Actividad de refuerzo y recuperación — Periodo 3",tipo:"Tarea",f:"3 sep",pts:20,d:"Leer el material del formulario y después contestarlo.\nSolo puede contestarse una vez y se cierra el mismo día.",
+   a:[["Formulario: Actividad de refuerzo y recuperación PERIODO 3","https://docs.google.com/forms/d/1trCnOIwuhoCvu56HhtQkbUbbz9xVKsF7DDcKj3myzis/edit"]]},
+  // ---- Periodo 4
+  {p:4,id:"884352964361",t:"Tema 1 (Periodo 4)",tipo:"Material",f:"10 sep (editado 20 oct)",d:"Leer y desarrollar en el cuaderno las actividades del archivo adjunto.",
+   a:[["Periodo 4.docx","https://drive.google.com/file/d/13bDXAGvR1z5OVkHwJ5U88zfva5Kughyp/view"]]},
+  {p:4,id:"869674871904",t:"Historia del ajedrez",tipo:"Tarea",f:"17 sep (editado 20 oct)",pts:100,d:"Leer y realizar la actividad en el cuaderno.",
+   a:[["HISTORIA DEL AJEDREZ.pdf","https://drive.google.com/file/d/1UicmvI6abCQ7FRhz9vv2lRH-PFFjsHRQ/view"]]},
+  {p:4,id:"887160915355",t:"Tema 2: La anticipación en la toma de decisiones estratégicas",tipo:"Material",f:"24 sep (editado 20 oct)",d:"Leer y analizar el documento y después desarrollar las actividades en el cuaderno.",
+   a:[["SEMANA 2 periodo 4.docx","https://drive.google.com/file/d/1Mmn1mB6sAkvudCzQTUB_QbJKhn6t-YKv/view"]]},
+  {p:4,id:"890001422758",t:"La planeación estratégica",tipo:"Material",f:"8 oct (editado 20 oct)",d:"Realizar en el cuaderno las actividades al final del documento.",
+   a:[["Semana 3.docx","https://drive.google.com/file/d/1YFlb_KsWXp773hAmilY0-wgVbPaiUHdT/view"]]},
+  {p:4,id:"892444059788",t:"Act. integradora: Historia y estrategia del ajedrez",tipo:"Tarea",f:"15 oct (editado 20 oct)",pts:30,d:"Contestar el cuestionario con base en los documentos de las clases anteriores.\nSolo se puede contestar una vez.",
+   a:[["Formulario: Historia y Estrategia del Ajedrez – Cuestionario y Análisis","https://docs.google.com/forms/d/1iS8Hfl_8DB97_DWE2levUD8llxGdq2nptadoajfQ6ww/edit"]]},
+  {p:4,id:"883552636866",t:"Actividad de refuerzo y recuperación extraordinaria — Periodo 4",tipo:"Material",f:"18 nov",d:"Leer el documento y desarrollar las tres actividades al final de la lectura.\nA mano, en hojas de papel bond y con carátula.\nEntrega: lunes 23 de noviembre de 2026.",
+   a:[["Actividad de refuerzo y recuperación extraordinaria P4 – 3° Salud A (Google Docs)","https://docs.google.com/document/d/1ICvR5WmN5m7LBSfHK911cWZLHtPGhJEUhZT4Pk9Vcfg/edit"]]},
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let filtro = "all";
+
+function stats(){
+  document.getElementById("stats").innerHTML = PER.map(P=>{
+    const it = D.filter(x=>x.p===P.n);
+    const m = it.filter(x=>x.tipo==="Material").length, t = it.length-m;
+    return `<button class="stat" style="--c:${P.c}" data-go="periodo-${P.n}"><b>Periodo ${P.n}</b><span>${it.length} publicaciones · ${m} mat. / ${t} tareas</span></button>`;
+  }).join("");
+  document.querySelectorAll(".stat").forEach(b=>b.onclick=()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:"smooth"}));
+}
+
+function render(){
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const ok = x => (filtro==="all"||x.tipo===filtro) &&
+    (!q || [x.t,x.d,x.tag||"",x.f,...x.a.map(a=>a[0])].join(" ").toLowerCase().includes(q));
+  let html="", total=0;
+  for(const P of PER){
+    const it = D.filter(x=>x.p===P.n && ok(x));
+    total += it.length;
+    if(!it.length && (q||filtro!=="all")) continue;
+    html += `<section class="periodo" id="periodo-${P.n}" style="--c:${P.c}">
+      <div class="ph"><h2>Periodo ${P.n} · ${esc(P.nombre)}</h2><small>${P.rango}</small></div>
+      ${it.map((x,i)=>`<article class="item">
+        <div class="top"><h3>${i+1}. ${esc(x.t)}</h3>
+          <div class="meta"><span class="badge ${x.tipo==="Tarea"?"b-tar":"b-mat"}">${x.tipo}</span>${x.pts?`<span class="badge b-pts">${x.pts} pts</span>`:""}<span class="date">${esc(x.f)}</span></div></div>
+        ${x.tag?`<span class="tag">${esc(x.tag)}</span>`:""}
+        <p class="desc">${esc(x.d)}</p>
+        <div class="links">${x.a.map(a=>`<a href="${a[1]}" target="_blank" rel="noopener">📎 ${esc(a[0])}</a>`).join("")}
+          <a class="cls" href="${cls(x.tipo,x.id)}" target="_blank" rel="noopener">Abrir en Classroom ↗</a></div>
+      </article>`).join("")}
+    </section>`;
+  }
+  document.getElementById("main").innerHTML = html || `<p class="empty">No hay publicaciones que coincidan con la búsqueda.</p>`;
+}
+
+document.getElementById("q").addEventListener("input", render);
+document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{
+  filtro=b.dataset.f; document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", c===b)); render();
+});
+stats(); render();
+</script>
+</body>
+</html>
